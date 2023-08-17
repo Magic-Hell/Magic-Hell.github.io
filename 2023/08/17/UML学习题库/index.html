@@ -1,0 +1,739 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Spring基础 | Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="第一章选择题 (单选题)什么不是面向对象程序设计的主要特征。（D）A. 封装B. 多态C. 继承D. 结构  (单选题)封装是一种（D）技术。A. 组装B. 产品化C. 固化D. 信息隐藏  (单选题)封装的目的是使对象的（A）分离。A. 定义和实现B. 设计和测试C. 设计和实现D. 分析和定义  (单选题)下列选项中不属于面向对象方法的优势之一的是（C）A. 复用性强B. 改善了软件结构C.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring基础">
+<meta property="og:url" content="http://example.com/2023/08/17/UML%E5%AD%A6%E4%B9%A0%E9%A2%98%E5%BA%93/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="第一章选择题 (单选题)什么不是面向对象程序设计的主要特征。（D）A. 封装B. 多态C. 继承D. 结构  (单选题)封装是一种（D）技术。A. 组装B. 产品化C. 固化D. 信息隐藏  (单选题)封装的目的是使对象的（A）分离。A. 定义和实现B. 设计和测试C. 设计和实现D. 分析和定义  (单选题)下列选项中不属于面向对象方法的优势之一的是（C）A. 复用性强B. 改善了软件结构C.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2023-08-17T09:36:17.000Z">
+<meta property="article:modified_time" content="2023-08-17T08:05:34.389Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2023/08/17/UML%E5%AD%A6%E4%B9%A0%E9%A2%98%E5%BA%93/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Spring基础',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-08-17 16:05:34'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Hexo"><span class="site-name">Hexo</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Spring基础</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-08-17T09:36:17.000Z" title="Created 2023-08-17 17:36:17">2023-08-17</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-08-17T08:05:34.389Z" title="Updated 2023-08-17 16:05:34">2023-08-17</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Spring基础"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="第一章选择题"><a href="#第一章选择题" class="headerlink" title="第一章选择题"></a>第一章选择题</h1><ol>
+<li><p>(单选题)什么不是面向对象程序设计的主要特征。（D）<br>A. 封装<br>B. 多态<br>C. 继承<br>D. 结构</p>
+</li>
+<li><p>(单选题)封装是一种（D）技术。<br>A. 组装<br>B. 产品化<br>C. 固化<br>D. 信息隐藏</p>
+</li>
+<li><p>(单选题)封装的目的是使对象的（A）分离。<br>A. 定义和实现<br>B. 设计和测试<br>C. 设计和实现<br>D. 分析和定义</p>
+</li>
+<li><p>(单选题)下列选项中不属于面向对象方法的优势之一的是（C）<br>A. 复用性强<br>B. 改善了软件结构<br>C. 软件的执行效率更高<br>D. 抽象更符合人类的思维习惯</p>
+</li>
+<li><p>(单选题)（A）是面向对象方法中用来描述“对客户隐藏对象属性和实现细节”的概念。<br>A. 封装<br>B. 继承<br>C. 多态<br>D. 抽象</p>
+</li>
+<li><p>(单选题)软件工程的概念是在（B）年被首次提出的。<br>A. 1949<br>B. 1968<br>C. 1972<br>D. 1989</p>
+</li>
+<li><p>(单选题)下列不属于软件工程的目标的一项是（C）<br>A. 提高软件产品的质量<br>B. 提高软件产品的可靠性<br>C. 减少软件产品的需求<br>D. 控制软件产品的开发成本</p>
+</li>
+<li><p>(单选题)软件危机产生的主要原因是（D）<br>A. 软件工具落后<br>B. 软件生产能力不足<br>C. 对软件认识不够<br>D. 软件本身的特点与开发方法</p>
+</li>
+</ol>
+<h1 id="第二章选择题"><a href="#第二章选择题" class="headerlink" title="第二章选择题"></a>第二章选择题</h1><ol>
+<li><p>(单选题)UML的全称是（B）<br>A. Unify Modeling Language<br>B. Unified Modeling Language<br>C. Unified Modem Language<br>D. Unified Making Language</p>
+</li>
+<li><p>(单选题)OMT方法是由下面哪位科学家提出的？（B）<br>A. Booch<br>B. Rumbaugh<br>C. Coad<br>D. Jacobson</p>
+</li>
+<li><p>(单选题)什么概念被认为是第二代面向对象技术的标志？（A）<br>A. 用例<br>B. UML语言<br>C. 活动图<br>D. 组件图</p>
+</li>
+<li><p>(单选题)正式的UML2.0规范是在（C）年通过的。<br>A. 2001<br>B. 2003<br>C. 2005<br>D. 2007</p>
+</li>
+<li><p>(单选题)下列表述中不属于UML的目标的是（C）<br>A. 为建模者提供可用的、富有表达力的、可视化的建模语言<br>B. 支持独立于编程语言和开发过程的规范<br>C. 称为一门独立的编程语言<br>D. 推动面向对象建模工具市场的成长</p>
+</li>
+<li><p>(单选题)UML主要用于（D）<br>A. 基于螺旋模型的结构化开发方法<br>B. 基于需求动态定义的原型化方法<br>C. 基于数据的数据流开发方法<br>D. 基于对象的面向对象的方法</p>
+</li>
+<li><p>(单选题)下面面向对象方法中不是UML所融合的方法的一项是（D）<br>A. Booch<br>B. OOSE<br>C. OMT<br>D. Coad&#x2F;Yourdon</p>
+</li>
+<li><p>(单选题)下列关于模型的表述，不正确的一项是（A）<br>A. 建模语言只能用图形表示<br>B. 模型所描绘的系统蓝图既可以包括详细的计划，也可以包括系统的总体规划<br>C. 模型可以帮助开发组生成有用的工作产品<br>D. 最好的模型总是与现实世界联系密切</p>
+</li>
+</ol>
+<h1 id="第三章选择题"><a href="#第三章选择题" class="headerlink" title="第三章选择题"></a>第三章选择题</h1><ol>
+<li><p>(单选题)类图应该画在Rose的哪种视图中？（B）<br>A. Use Case View<br>B. Logic View<br>C. Component View<br>D. Deployment View</p>
+</li>
+<li><p>(单选题)下面哪个不是UML中的静态视图？（A）<br>A. 状态图<br>B. 用例图<br>C. 对象图<br>D. 类图</p>
+</li>
+<li><p>(单选题)在UML中，（B）图显示了一组类、接口、协作以及他们之间的关系。<br>A. 状态图<br>B. 类图<br>C. 用例图<br>D. 部署图</p>
+</li>
+<li><p>(单选题)UML中有四种关系是：依赖、泛化、关联和（C）<br>A. 继承<br>B. 合作<br>C. 实现<br>D. 抽象</p>
+</li>
+<li><p>(单选题)UML中的事物包括：结构事物、分组事物、注释事物和（D）<br>A. 实体事物<br>B. 边界事物<br>C. 控制事物<br>D. 动作事物</p>
+</li>
+<li><p>(单选题)UML体系包括三个部分：UML基本构造块，（A）和UML公共机制<br>A. UML规则<br>B. UML命名<br>C. UML模型<br>D. UML约束</p>
+</li>
+<li><p>(单选题)下列描述中，哪个不是建模的基本原则。（D）<br>A. 要仔细的选择模型<br>B. 每一种模型可以在不同的精度级别上表示所要开发的系统<br>C. 模型要与现实相联系<br>D. 对一个重要的系统用一个模型就可以充分描述</p>
+</li>
+<li><p>(单选题)在 ROSE中，时序图和协作图（或通信图）通常建立在  (  B ) 下的Use Case Realization包中。<br>A. Use Case View<br>B. Logical View<br>C. Component View<br>D. Deployment View</p>
+</li>
+<li><p>(单选题)下面哪个视图属于UML语言的交互图？（D）<br>A. 行为图<br>B. 状态图<br>C. 实现图<br>D. 顺序图</p>
+</li>
+<li><p>(单选题)领域模型又称为（C）<br>A. 业务流程模型<br>B. 用例模型<br>C. 概念模型<br>D. 设计模型</p>
+</li>
+<li><p>(单选题)UML图不包括（D）<br>A. 用例图<br>B. 类图<br>C. 状态图<br>D. 流程图</p>
+</li>
+<li><p>(单选题)当需要表示某个元素的特性信息时，可以使用（D）这种扩展机制。<br>A. 约束<br>B. 构造型<br>C. 注释<br>D. 标记值</p>
+</li>
+<li><p>(单选题)在“4+1”架构中，（B）主要用来描述软件的各个模块的组织方式。<br>A. 逻辑视图<br>B. 开发视图<br>C. 进程视图<br>D. 物理视图</p>
+</li>
+<li><p>(单选题)UML使用（D）来描述接口和实现接口的类之间的关系。<br>A. 关联关系<br>B. 泛化关系<br>C. 依赖关系<br>D. 实现关系</p>
+</li>
+<li><p>(单选题)下列UML图中不属于结构图的一项是（D）。<br>A. 类图<br>B. 对象图<br>C. 组件图<br>D. 顺序图</p>
+</li>
+<li><p>(单选题)下列UML图中不是UML 2.0规范新增加的图的一项是（A）。<br>A. 类图<br>B. 交互概览图<br>C. 组合结构图<br>D. 时序图</p>
+</li>
+<li><p>(单选题)下列选项中不属于UML的扩展机制的是（C）。<br>A. 约束<br>B. 构造型<br>C. 注释<br>D. 标记值</p>
+</li>
+<li><p>(单选题)描述了一组动作序列的模型元素是（C）。<br>A. 类<br>B. 接口<br>C. 用例<br>D. 组件</p>
+</li>
+<li><p>(单选题)在UML中表示一般事物与特殊事物之间的关系是（B）。<br>A. 关联关系<br>B. 泛化关系<br>C. 依赖关系<br>D. 实现关系</p>
+</li>
+<li><p>(单选题)我们可以使用UML中的（A）来描述图书馆与书的关系。<br>A. 关联关系<br>B. 泛化关系<br>C. 依赖关系<br>D. 实现关系</p>
+</li>
+</ol>
+<h1 id="第四章选择题"><a href="#第四章选择题" class="headerlink" title="第四章选择题"></a>第四章选择题</h1><ol>
+<li><p>(单选题)用例（Use-case）用来描述系统在事件做出响应时所采取的行动。用例之间是具有相关性的。在一个“订单输入子系统”中，创建新订单和更新订单都需要检查用户帐号是否正确。那么，用例“创建新订单”、“更新订单”与用例“检查用户帐号”之间是（　A　）关系<br>A. 包含（include）<br>B. 扩展（extend）<br>C. 分类（classification）<br>D. 聚集（aggregation）</p>
+</li>
+<li><p>(单选题)UML中，对象行为是通过交互来实现的，是对象间为完成某一目的而进行的一系列消息交换。消息序列可用两种类来表示，分别是（　D　）<br>A. 状态图和顺序图<br>B. 活动图和协作图<br>C. 状态图和活动图<br>D. 顺序图和协作图</p>
+</li>
+<li><p>(单选题)UML中，用例图展示了外部Actor与系统所提供的用例之间的连接，UML中的外部Actor是指（　　D　）<br>A. 人员<br>B. 单位<br>C. 人员和单位<br>D. 人员和外部系统</p>
+</li>
+<li><p>(单选题)<br>下图中的空心箭头连线表示（ A   ）关系。<br><img src="https://img-blog.csdnimg.cn/7008f74b68c94fce9f30ffc49817844e.png" alt="在这里插入图片描述"><br>A. 泛化<br>B. 包含<br>C. 扩展<br>D. 实现</p>
+</li>
+<li><p>(单选题)在用例之间，会有三种不同的关系，下列不是用例之间关系的是（    D   ）。<br>A. 包含（include）<br>B. 扩展（extend）<br>C. 泛化（generalization）<br>D. 关联（connect ）</p>
+</li>
+<li><p>(单选题)在ATM自动取款机的工作模型中（用户通过输入正确的用户资料，从银行取钱的过程），下面不是“Actor”的是（    D  ）。<br>A. 用户<br>B. ATM提款机<br>C. ATM提款机管理员<br>D. 取款</p>
+</li>
+<li><p>(单选题)下面不属于用例之间关系的是（A）<br>A. 友元<br>B. 扩展<br>C. 包含<br>D. 泛化</p>
+</li>
+<li><p>(单选题)在建立系统的用例模型时，首先应该确定系统的参与者。以下问题中，对于确定参与者没有用处的是 (  C ) 。<br>A. 谁是系统的主要用户，即谁使用系统的主要功能<br>B. 谁来管理、维护系统，以保证系统的正常运行<br>C. 系统的功能应如何实现<br>D. 系统需要和哪些其他的系统交互</p>
+</li>
+<li><p>(单选题)执行者（Actor）与用例之间的关系是（C）<br>A. 包含关系<br>B. 泛化关系<br>C. 关联关系<br>D. 扩展关系</p>
+</li>
+<li><p>(单选题)包含关系是在（C）关系的基础上通过添加构造型实现的。<br>A. 关联关系<br>B. 泛化关系<br>C. 依赖关系<br>D. 实现关系</p>
+</li>
+<li><p>(单选题)下面不属于用例图的作用的是（B）。<br>A. 展示软件的功能<br>B. 展示软件的特性<br>C. 展示软件使用者与软件功能的关系<br>D. 展示软件功能之间的关系</p>
+</li>
+<li><p>(单选题)下列不属于构成用例图的要素是（A）<br>A. 包含<br>B. 参与者<br>C. 用例<br>D. 关系</p>
+</li>
+<li><p>(单选题)对于ATM系统的“取款”用例（客户通过插入银行卡并输入正确的密码从ATM机中成功取款的过程），（C）应该作为该用例的参与者。<br>A. ATM机<br>B. 银行工作人员<br>C. 取款客户<br>D. 取款</p>
+</li>
+<li><p>(单选题)下列关于用例图的描述，错误的是（D）<br>A. 用例图表示系统的行为<br>B. 用例在用例图中使用椭圆表示<br>C. 参与者在用例图中使用小人表示<br>D. 一般使用从用例指向参与者的箭头表示启动关系</p>
+</li>
+<li><p>(单选题)在进行某网上商店的用例图绘制时，（A）是一个不合适的用例。<br>A. 打开页面<br>B. 购买商品<br>C. 管理订单<br>D. 搜索商品</p>
+</li>
+<li><p>(单选题)下列说法中，不正确的是（B）<br>A. 用例和参与者之间的对应关系是关联关系，它表示参与者使用了系统的用例<br>B. 参与者指的是人，不能是子系统和时间等概念<br>C. 特殊需求指的是一个用例的非功能需求和设计约束<br>D. 在扩展关系中，基础用例提供了一个或多个插入点，扩展用例在这些插入点中提供了另外的行为</p>
+</li>
+<li><p>(单选题)以下各项中，（B）不是用例图适于表达的内容。<br>A. 参与者<br>B. 事件流<br>C. 用例关系<br>D. 系统边界</p>
+</li>
+</ol>
+<h1 id="第五章选择题"><a href="#第五章选择题" class="headerlink" title="第五章选择题"></a>第五章选择题</h1><ol>
+<li><p>(单选题)下列关于类方法的声明，不正确的是（C）<br>A. 方法定义了类所许可的行动<br>B. 从一个类所创建的所有对象可以使用同一组属性和方法<br>C. 每个方法应该有一个参数<br>D. 如果在同一个类中定义了类似的操作，则他们的行为应该是类似的</p>
+</li>
+<li><p>(单选题)类通常可以分为实体类，（  C   ）和边界类。<br>A. 父类<br>B. 子类<br>C. 控制类<br>D. 祖先类</p>
+</li>
+<li><p>(单选题)通常对象有很多属性，下面仅能在对象内部访问的属性可见性限制是（D）<br>A. public<br>B. protected<br>C. friendly<br>D. private</p>
+</li>
+<li><p>(单选题)类的结构是（D）。<br>A. 由代码来表示<br>B. 由属性和关系来表示<br>C. 由操作来表示<br>D. B&amp;C</p>
+</li>
+<li><p>(单选题)类的行为是（A）<br>A. 由一组操作决定<br>B. 由类的属性决定<br>C. 对类的每一个对象唯一的<br>D. 由父类决定</p>
+</li>
+<li><p>(单选题)在类图中，下面哪个符号表示继承关系（C）</p>
+</li>
+</ol>
+<p>A. <img src="https://img-blog.csdnimg.cn/5b6c8d06d7c2436080547cba4a76c148.png" alt="在这里插入图片描述"><br>B. <img src="https://img-blog.csdnimg.cn/f08db98d84254ccd947348f5be9a7471.png" alt="在这里插入图片描述"></p>
+<p>C. <img src="https://img-blog.csdnimg.cn/d2e25cbf35214adfbcc8279c3b33d1d2.png" alt="在这里插入图片描述"></p>
+<p>D. <img src="https://img-blog.csdnimg.cn/d1e6a9e8a4374015be87e942d76de503.png" alt="在这里插入图片描述"></p>
+<ol start="7">
+<li><p>(单选题)下面的(A)模式将对象组合成树形结构以表示“部分-整体”的层次结构，并使得用户对单个对象和组合对象的使用具有一致性。<br>A. 组合（Composite）<br>B. 桥接（Bridge）<br>C. 修饰（Decorator）<br>D. 外观（Facade）</p>
+</li>
+<li><p>(单选题)如下的短语(B)能最好地表示“泛化”关系。<br>A. is a part of<br>B. is a kind of<br>C. is a replica of<br>D. is an inheritance of</p>
+</li>
+<li><p>(单选题)类A的一个操作调用类B的一个操作，且这两个类之间不存在其他关系，那么类A和类B之间是  (  C   )  关系。<br>A. 实现<br>B. 继承<br>C. 依赖<br>D. 关联</p>
+</li>
+<li><p>(单选题)在用ROSE创建的类图中，“#”表示的可见性是(B)<br>A. public<br>B. protected<br>C. private<br>D. package</p>
+</li>
+<li><p>(单选题)UML中关联的多重度是指(B)<br>A. 一个类有多个方法被另一个类调用<br>B. 一个类的实体类能够与另一个类的多个实体类相关联<br>C. 一个类的某个方法被另一个类调用的次数<br>D. 两个类所具有的相同的方法和属性</p>
+</li>
+<li><p>(单选题)类之间的关系不包括（D）<br>A. 依赖关系<br>B. 泛化关系<br>C. 实现关系<br>D. 分解关系</p>
+</li>
+<li><p>(单选题)类图应该画在ROSE的哪种（  B ）视图中。<br>A. Use Case View<br>B. Logic View<br>C. Component View<br>D. Department View</p>
+</li>
+<li><p>(单选题)汽车（Car）由轮子、发动机、油箱、座椅、方向盘等组成，那么Car类和其他类（Wheel、Engin、Tank、Chair、SteeringWheel）之间的关系是（A）。<br>A. 关联关系<br>B. 泛化关系<br>C. 实现关系<br>D. 依赖关系</p>
+</li>
+<li><p>(单选题)假设类A的一个操作的其中一个参数是类B的一个对象，且这两个类之间不存在其他关系，那么类A和类B之间构成（D）。<br>A. 关联关系<br>B. 泛化关系<br>C. 实现关系<br>D. 依赖关系</p>
+</li>
+<li><p>(单选题)在下列选项中不属于类图的元素的是（B）<br>A. 类<br>B. 用例<br>C. 接口<br>D. 关联类</p>
+</li>
+<li><p>(单选题)当类的属性与操作添加了（B）限定符后表示该属性或操作只对本类可见，不能被其他类访问。<br>A. public<br>B. private<br>C. protected<br>D. package</p>
+</li>
+<li><p>(单选题)下列关于接口关系的说法不正确的是（D）。<br>A. 接口是一种特殊的类<br>B. 接口可以看成是有interface构造型的类<br>C. 一个类可以通过实现接口从而具有接口指定的行为<br>D. 在调用设计合理的接口时，需要知道类对接口实现的具体信息</p>
+</li>
+<li><p>(单选题)下列对类和接口的描述不正确的是（D）。<br>A. 当使用子类去替换一处父类时，设计良好的软件应当可以正确实现功能<br>B. 接口的方法名必须是公开（public）的<br>C. 一个类可以实现多个接口<br>D. 当一个类拥有另外一个类的全部属性和方法的时候，他们之间是实现关系</p>
+</li>
+<li><p>(单选题)下列关于类图的说法中正确的是（C）<br>A. 类图是由类、组件、包等模型元素以及它们间的关系构成的<br>B. 类图的目的在于描述系统的运行方式，而不是系统如何构成<br>C. 类图通过系统中的类与类间的关系描述了系统的静态特性<br>D. 类图和数据模型有许多相似之处，区别是数据模型不仅描述了内部信息的结构，也包含了系统的内部行为</p>
+</li>
+</ol>
+<h1 id="第六章选择题"><a href="#第六章选择题" class="headerlink" title="第六章选择题"></a>第六章选择题</h1><ol>
+<li><p>(单选题)下列关于链的叙述中，正确的一项是（D）。<br>A. 链就是关联关系<br>B. 链使用一根虚线段来表示<br>C. 链用来表示对象和类之间的关系<br>D. 链没有多重性</p>
+</li>
+<li><p>(单选题)下列关于对象图的叙述中，错误的一项是（C）。<br>A. 对象图显示了某时刻的一组对象以及他们之间的关系<br>B. 对象图中的主要元素是链和对象<br>C. 对象图中的链是泛化关系的实例<br>D. 对象图主要用于说明系统在某一特定时刻的具体运行状态</p>
+</li>
+<li><p>(单选题)下列关于类和对象的关系的叙述中，错误的一项是（B）。<br>A. 每个对象都是某个类的实例<br>B. 每个类某一时刻必定存在对象实体<br>C. 类是静态的描述<br>D. 类之间可能存在关联关系，对象之间也可能存在链</p>
+</li>
+<li><p>(单选题)下列关于对象图的叙述中，错误的一项是（C）。<br>A. 对象图显示了某一时刻的一组对象以及他们之间的关系<br>B. 对象图可以被看作是类图的实例<br>C. 对象图表达的交互的动态部分<br>D. 对象图中的建模元素主要有对象和链</p>
+</li>
+</ol>
+<h1 id="第七章选择题"><a href="#第七章选择题" class="headerlink" title="第七章选择题"></a>第七章选择题</h1><ol>
+<li><p>(单选题)（ A  ）是用于把元素组织成组的通用机制<br>A. 包<br>B. 类<br>C. 接口<br>D. 组件</p>
+</li>
+<li><p>(单选题)关于包的描述，哪个不正确（   D　 ）<br>A. 和其他建模元素一样，每个包必须有一个区别于其他包的名字<br>B. 包中可以包含其他元素，比如类、接口、组件等<br>C. 包的可见性包括：公有、私有、受保护<br>D. 导出（export）使得一个包中的元素可以单项访问另一个包中的元素</p>
+</li>
+<li><p>(单选题)在下列选项中，包元素之间可能形成的关系是（B）。<br>A. 关联关系<br>B. 依赖关系<br>C. 实现关系<br>D. 扩展关系</p>
+</li>
+<li><p>(单选题)包图的组成不包括（D）。<br>A. 包的名称和构造型<br>B. 包中含有的元素<br>C. 包与包之间的关系<br>D. 包间的消息和发送者</p>
+</li>
+<li><p>(单选题)下列关于包的用途，说法不正确的是（C）。<br>A. 描述需求和设计的高层情况<br>B. 组织源代码<br>C. 细化用例表达<br>D. 将复杂系统在逻辑层面上模块化</p>
+</li>
+<li><p>(单选题)下列选项中，不能直接放在包中的元素是（B）。<br>A. 类<br>B. 操作<br>C. 包<br>D. 对象图</p>
+</li>
+</ol>
+<h1 id="第八章选择题"><a href="#第八章选择题" class="headerlink" title="第八章选择题"></a>第八章选择题</h1><ol>
+<li><p>(单选题)顺序图由类角色，生命线，激活期和（  B ）组成<br>A. 关系<br>B. 消息<br>C. 用例<br>D. 实体</p>
+</li>
+<li><p>(单选题)一个对象和另一个对象之间，通过消息来进行通信。消息通信在面向对象的语言中即（ C ）<br>A. 方法实现<br>B. 方法嵌套<br>C. 方法调用<br>D. 方法定义</p>
+</li>
+<li><p>(单选题)顺序图是强调消息随时间顺序变化的交互图，下面不是用来描述顺序图的组成部分的是（   D   ）。<br>A. 类角色<br>B. 生命线<br>C. 消息<br>D. 转换</p>
+</li>
+<li><p>(单选题)顺序图反映对象之间发送消息的时间顺序，它与（  C    ）是同构的。<br>A. 用例图<br>B. 类图<br>C. 协作图<br>D. 状态图</p>
+</li>
+<li><p>(单选题)在UML的顺序图中，通常由左向右分层排列各个对象，正确的排列方法是（  A ）<br>A. 执行者角色、控制类、用户接口、业务层、后台数据库<br>B. 执行者角色、用户接口、控制类、业务层、后台数据库<br>C. 执行者角色、控制类、用户接口、后台数据库、业务层<br>D. 执行者角色、用户接口、业务层、控制类、后台数据库</p>
+</li>
+<li><p>(单选题)消息的组成不包括（   A  ）<br>A. 接口<br>B. 活动<br>C. 发送者<br>D. 接收者</p>
+</li>
+<li><p>(单选题)多对象是UML哪个视图中的概念（  C ）<br>A. 类图<br>B. 状态图<br>C. 协作图<br>D. 组件图</p>
+</li>
+<li><p>(单选题)顺序图中的消息是以（ A ）顺序排列的。<br>A. 时间<br>B. 调用<br>C. 发送者<br>D. 接收者</p>
+</li>
+<li><p>(单选题)顺序图的作用有（B）。<br>A. 确认和丰富一个使用语境的逻辑表达<br>B. 细化用例的表达<br>C. 有效的描述如何分配各个类的职责，以及这些类具有相应职责的原因<br>D. 显示在交互过程中各个对象之间的组织交互关系及对象彼此之间的连接</p>
+</li>
+<li><p>(单选题)下列关于生命线的说法不正确的是（ D ）。<br>A. 生命线是一条垂直的虚线，用来表示顺序图中的对象在一段时间内存在<br>B. 在顺序图中，每个对象的底部中心的位置都带有生命线<br>C. 在顺序图中，生命线是一条时间线，从顺序图的顶部一直延伸到底部，所用时间取决于交互持续的时间，即生命线表现了对象存在的时段<br>D. 顺序图中的所有对象在程序一开始运行的时候，其生命线都必须存在</p>
+</li>
+<li><p>(单选题)在UML的顺序图中将交互关系表现成一幅二维图，其中纵向是（A），横向是（A）。<br>A. 时间、对象角色<br>B. 交互、消息<br>C. 时间、消息<br>D. 交互、泛化</p>
+</li>
+<li><p>(单选题)下列关于顺序图的说法不正确的是（D）。<br>A. 顺序图是对象之间传送消息时间顺序的可视化表示<br>B. 顺序图比较详细地描述了用例表达的需求<br>C. 顺序图的目的在于描述系统中各个对象按照时间顺序的交互<br>D. 在顺序图中，消息表示一组在对象间传递的数据，不能代表调用</p>
+</li>
+</ol>
+<h1 id="第九章选择题"><a href="#第九章选择题" class="headerlink" title="第九章选择题"></a>第九章选择题</h1><ol>
+<li><p>(单选题)关于协作图的描述，下列哪个不正确（　B　　）<br>A. 协作图作为一种交互图，强调的是参加交互的对象的组织<br>B. 协作图是顺序图的一种特例<br>C. 协作图中有消息流的顺序号<br>D. 在ROSE中，协作图可在顺序图的基础上按F5键自动生成</p>
+</li>
+<li><p>(单选题)在UML中，协作图的组成不包括（  C  ）<br>A. 对象<br>B. 消息<br>C. 发送者<br>D. 链</p>
+</li>
+<li><p>(单选题)下列选项中不属于通信图与顺序图的共同点的是（ D ）。<br>A. 表达语义相同，都是对系统中的交互建模<br>B. 对象责任相同，都担任发送者和接受者的角色<br>C. 主要元素相同，都是对象与消息作为主要元素<br>D. 对象表示相同，都可以显示地体现出对象的生命周期</p>
+</li>
+<li><p>(单选题)在通信图中用来连接对象与对象的元素是（B）。<br>A. 关联关系<br>B. 链<br>C. 生命线<br>D. 消息</p>
+</li>
+<li><p>(单选题)下列关于通信图中链的叙述，正确的是（A）。<br>A. 通信图中的链和对象图中的链在语义及表示法上相同<br>B. 在通信图中，链一定连接了两个不同的对象<br>C. 在通信图中，链可以添加可见性修饰来表示两端对象对整条链的可见性<br>D. 通信图中对象之间的链一定在整个软件的生命周期内都存在</p>
+</li>
+</ol>
+<h1 id="第十章选择题"><a href="#第十章选择题" class="headerlink" title="第十章选择题"></a>第十章选择题</h1><ol>
+<li><p>(单选题)若将活动状态比作方法，那么动作状态即（  C ）<br>A. 方法名<br>B. 方法返回值<br>C. 方法体中的每一条语句<br>D. 方法的可见性</p>
+</li>
+<li><p>(单选题)事件（event）表示对一个在时间和空间上占据一定位置的有意义的事情的规格说明，下面哪个不是事件的类型（  C  ）<br>A. 信号<br>B. 调用事件<br>C. 源事件<br>D. 时间事件</p>
+</li>
+<li><p>(单选题)下列关于状态图的说法中，正确的是（  C　）<br>A. 状态图是UML中对系统的静态方面进行建模的五种图之一<br>B. 状态图是活动图的一个特例，状态图中的多数状态是活动状态<br>C. 活动图和状态图是对一个对象的生命周期进行建模，描述对象随时间变化的行为。<br>D. 状态图强调对有几个对象参与的活动过程建模，而活动图更强调对单个反应型对象建模</p>
+</li>
+<li><p>(单选题)对反应型对象建模一般使用（  A ）图<br>A. 状态图<br>B. 顺序图<br>C. 活动图<br>D. 类图</p>
+</li>
+<li><p>(单选题)状态图包括（   D   ）<br>A. 类的状态和类执行的动作<br>B. 状态之间的转换<br>C. 触发类的动作的事件<br>D. 以上所有选项</p>
+</li>
+<li><p>(单选题)下列对状态图描述不正确的是 (  C  )<br>A. 状态图通过建立类对象的生命周期模型来描述对象随时间变化的动态行为<br>B. 状态图适用于描述状态和动作的顺序，不仅可以展现一个对象拥有的状态，还可与说明事件如何随着时间的推移来影响这些状态<br>C. 状态图的主要目的是描述对象创建和撤销过程中资源的不同状态，有利于开发人员提高开发效率<br>D. 状态图描述了一个实体基于事件反映的动态行为，显示了该如何根据当前所处状态对不同事件做出反应</p>
+</li>
+<li><p>(单选题)组成一个状态的多个子状态之间是互斥的，不能同时存在，那么这种状态称为（ A ）复合状态。<br>A. 顺序<br>B. 并发<br>C. 历史<br>D. 同步</p>
+</li>
+<li><p>(单选题)假设在某个状态的内部的一行内容表示为“eventA&#x2F;defer”，则这行内容所表示的是（ D ）。<br>A. 触发器<br>B. 内部转换<br>C. 内部执行活动<br>D. 可推迟事件</p>
+</li>
+<li><p>(单选题)下列说法不正确的是（D）。<br>A. 触发器事件就是能够引起状态转换的事件，触发器事件可以是信号或者调用等<br>B. 没有触发器事件的转换是由状态活动的完成引起的<br>C. 内部转换默认不激发入口和出口动作，因此内部转换激发的结果不改变本来状态<br>D. 状态机图的主要目的是描述对象创建和销毁过程中资源的不同状态，有利于开发人员提高开发效率</p>
+</li>
+<li><p>(单选题)假设一个转换被表示为“A［B］&#x2F;C”，那么这个转换所表达的语义是（B）<br>A. 该转换的触发器事件为B，监护条件为A，效果列表为C<br>B. 该转换的触发器事件为A，监护条件为B，效果列表为C<br>C. 该转换的触发器事件为C，监护条件为A，效果列表为B<br>D. 该转换的触发器事件为A，监护条件为C，效果列表为B</p>
+</li>
+<li><p>(单选题)需要依赖于某个表达式所表达的布尔条件才能发生的事件被称作（ C ）。<br>A. 信号事件<br>B. 调用事件<br>C. 改变事件<br>D. 时间事件</p>
+</li>
+<li><p>(单选题)状态机图的意义是（A）<br>A. 对实体在其生命周期中的各个状态进行建模，状态是实体在一段时间内保持的一个状态<br>B. 将系统的需求转化成图形表示，简单直观，还可以转化成程序的伪代码<br>C. 表示两个或多个对象之间的独立连接，是不同对象不同时期情况的图形化描述<br>D. 描述对象和对象之间按时间顺序的交互行为</p>
+</li>
+<li><p>(单选题)下列选项不属于伪状态的是（B）<br>A. 历史状态<br>B. 复合状态<br>C. 初态<br>D. 选择</p>
+</li>
+</ol>
+<h1 id="第十一章活动图"><a href="#第十一章活动图" class="headerlink" title="第十一章活动图"></a>第十一章活动图</h1><ol>
+<li><p>(单选题)（ A  ）技术是将一个活动图中的活动状态进行分组，每一组表示一个特定的类、人或部门，他们负责完成组内的活动。<br>A. 泳道<br>B. 交叉汇合<br>C. 分支<br>D. 转移</p>
+</li>
+<li><p>(单选题)下列关于状态图的说法中，正确的是（  C　）<br>A. 状态图是UML中对系统的静态方面进行建模的五种图之一<br>B. 状态图是活动图的一个特例，状态图中的多数状态是活动状态<br>C. 状态图和活动图是对对象的生命周期进行建模，描述对象随时间变化的行为<br>D. 状态图强调对有几个对象参与的活动过程建模，而活动图更强调对单个反应型对象建模。</p>
+</li>
+<li><p>(单选题)下面不是活动图中的基本元素的是（   D   ）。<br>A. 状态、分支<br>B. 分叉、汇合<br>C. 泳道、对象流<br>D. 用况、状态</p>
+</li>
+<li><p>(单选题)以下说法错误的是（C）。<br>A. 活动图中的开始标记一般只有一个，而终止标记可能有多个<br>B. 判断节点的出口条件必须保证不互相重复，并且不缺少情况<br>C. 在活动图中并没有表现出并发，在实际实现的时候一定不涉及并发问题<br>D. 活动图比状态图更加合适去描述一个流程</p>
+</li>
+<li><p>(单选题)下列建模需求中，适合使用活动图来完成的是（C）。<br>A. 对体系结构建模<br>B. 对消息流程建模<br>C. 对业务流程建模<br>D. 对数据库模式建模</p>
+</li>
+<li><p>(单选题)在活动图中负责在一个活动节点执行完毕后切换到另一个节点的元素是（A）。<br>A. 控制流<br>B. 对象流<br>C. 判断节点<br>D. 扩展区域</p>
+</li>
+<li><p>(单选题)若想在活动图中表现对象流，则首先需要绘制出（C）元素。<br>A. 控制流<br>B. 分叉节点<br>C. 泳道<br>D. 扩展区域</p>
+</li>
+<li><p>(单选题)以下哪一项信息不容易在活动图中表达？（D）<br>A. 动作执行顺序<br>B. 动作的执行者<br>C. 活动进行的逻辑结构<br>D. 执行者之间的交互</p>
+</li>
+<li><p>(单选题)在活动图中用于连接动作或节点，表示活动进行方向的元素是（A）。<br>A. 控制流<br>B. 对象流<br>C. 动作<br>D. 扩展区域</p>
+</li>
+<li><p>(单选题)在活动图中用于对元素按照负责对象分组的元素是（A）。<br>A. 判断节点<br>B. 泳道<br>C. 分叉节点<br>D. 控制流</p>
+</li>
+<li><p>(单选题)在活动图中用于将判断节点产生的多个控制流合成并导出为一个控制流的元素是（D）。<br>A. 分叉节点<br>B. 结合节点<br>C. 判断节点<br>D. 合并节点</p>
+</li>
+<li><p>(单选题)活动图中可能出现的终止标记的数量是（B）。<br>A. 0<br>B. 0到多个<br>C. 1<br>D. 0或1</p>
+</li>
+<li><p>(单选题)在活动图中包含并发含义的元素主要指的是（D）。<br>A. 控制流<br>B. 判断节点<br>C. 泳道<br>D. 分叉节点</p>
+</li>
+</ol>
+<h1 id="第十二章选择题"><a href="#第十二章选择题" class="headerlink" title="第十二章选择题"></a>第十二章选择题</h1><ol>
+<li><p>(单选题)组件图用于对系统的静态实现视图建模，这种视图主要支持系统部件的配置管理，通常可以分为四种方式来完成，下面哪种不是其中之一（　B　）<br>A. 对源代码建模<br>B. 对事物建模<br>C. 对物理数据库建模<br>D. 对可适应的系统建模</p>
+</li>
+<li><p>(单选题)组件图专注于系统的（ B  ）实现图<br>A. 动态<br>B. 静态<br>C. 基础<br>D. 实体</p>
+</li>
+<li><p>(单选题)（ B  ）是被节点执行的事物<br>A. 包<br>B. 组件<br>C. 接口<br>D. 节点</p>
+</li>
+<li><p>(单选题)（ D   ）是可复用的，提供明确接口完成特定功能的程序代码块。<br>A. 模块<br>B. 函数<br>C. 用例<br>D. 软件构件</p>
+</li>
+<li><p>(单选题)（  D  ）是系统中遵从一组接口且提供实现的一个物理部件，通常指开发和运行时类的物理实现<br>A. 部署图<br>B. 类<br>C. 接口<br>D. 组件</p>
+</li>
+<li><p>(单选题)构件图的组成不包括 (   C  )<br>A. 接口<br>B. 构件<br>C. 发送者<br>D. 依赖关系</p>
+</li>
+<li><p>(单选题)UML 中的构件是遵从一组接口并提供一组接口的实现，下列说法错误的是(  B  )。<br>A. 构件应是可替换的<br>B. 构件表示的是逻辑模块而不是物理模块<br>C. 构件应是组成系统的一部分<br>D. 构件与类处于不同的抽象层次</p>
+</li>
+</ol>
+<h1 id="第十三章选择题"><a href="#第十三章选择题" class="headerlink" title="第十三章选择题"></a>第十三章选择题</h1><ol>
+<li><p>(单选题)部署图的组成不包括（C）<br>A. 处理器<br>B. 设备<br>C. 构件<br>D. 连接</p>
+</li>
+<li><p>(单选题)下列说法正确的是（D）<br>A. 部署就是复制软件<br>B. 软件的执行环境一般是一个独立的设备节点<br>C. 部署图不适用于分布式系统<br>D. 节点之间一般会存在通信</p>
+</li>
+<li><p>(单选题)软件部署的实质是（D）<br>A. 部署软件组件<br>B. 部署软件程序<br>C. 部署软件模型<br>D. 部署软件制品</p>
+</li>
+<li><p>(单选题)下列关于部署图的说法不正确的是（B）<br>A. 部署图描述了一个系统运行时的硬件节点，这些节点上运行的软件构件将在何处物理运行，以及它们将如何彼此通信的静态视图<br>B. 每一个系统模型中可以包含多个部署图<br>C. 在一个部署图中包含了两种基本的模型元素：节点和节点之间的连接<br>D. 每一个系统模型中应该仅包含一个部署图</p>
+</li>
+<li><p>(单选题)某系统部署时需要一台LED显示屏，其在部署图中应该被建模为（A）类型节点<br>A. 设备<br>B. 处理器<br>C. 二者均可<br>D. 都不适用</p>
+</li>
+</ol>
+<h1 id="第十四章选择题"><a href="#第十四章选择题" class="headerlink" title="第十四章选择题"></a>第十四章选择题</h1><ol>
+<li><p>(单选题)RUP中有（   C  ）个核心过程工作流。<br>A. 1<br>B. 3<br>C. 6<br>D. 9</p>
+</li>
+<li><p>(单选题)定义大多数的需求和范围的工作是在RUP中的(  B  )阶段完成的。<br>A. 初始阶段<br>B. 细化阶段<br>C. 构造阶段<br>D. 提交阶段</p>
+</li>
+<li><p>(单选题)下列(  D )不在RUP的初始阶段中完成的<br>A. 编制简要的愿景文档<br>B. 粗略评估成本<br>C. 定义大多数的需求<br>D. 业务案例</p>
+</li>
+<li><p>(单选题)估计项目时长、对项目进行风险评估一般是（A）进行的工作。<br>A. 起始阶段<br>B. 细化阶段<br>C. 构建阶段<br>D. 转化阶段</p>
+</li>
+<li><p>(单选题)下列有关核心工作流的描述有误的是（C）。<br>A. 在分析和设计工作流中需要考虑系统的运行时性能，以及用户需求的满足程度<br>B. 实现工作流就是编程实现各个组件的过程<br>C. 部署工作流需要输出完整产品，并对组件进行单元测试<br>D. 配置和变更管理工作流描述了开发团队应当如何掌握数量庞大的制品</p>
+</li>
+<li><p>(单选题)下列选项中，不是迭代过程的优势的一项是（C）。<br>A. 可以更早地弱化风险<br>B. 更灵活地处理各种变化<br>C. 可以建立更抽象的软件架构<br>D. 开发团队不必一次完成所有工作，可以在工作的过程中学习和调整</p>
+</li>
+<li><p>(单选题)统一软件开发过程共有九个核心工作流，以下（D）不是RUP的核心工作流。<br>A. 需求工作流<br>B. 实现工作流<br>C. 测试工作流<br>D. 架构工作流</p>
+</li>
+<li><p>(单选题)RUP建议使用这个句式来描述过程： “谁在什么时候要用什么方法，做什么”，其中“做什么”对应着静态结构中的（C）元素。<br>A. 工作者<br>B. 活动<br>C. 制品<br>D. 工作流</p>
+</li>
+<li><p>(单选题)统一软件开发过程RUP共存在四个阶段，以下（B）不是RUP的阶段之一。<br>A. 起始阶段<br>B. 策划阶段<br>C. 构建阶段<br>D. 转化阶段</p>
+</li>
+</ol>
+<h1 id="第一章简答题"><a href="#第一章简答题" class="headerlink" title="第一章简答题"></a>第一章简答题</h1><ol start="17">
+<li><p>(简答题)什么是对象间的可见性？<br>可见性指的是一个对象能够“看到”或者引用另一个对象的能力。</p>
+</li>
+<li><p>(简答题)简述面向对象分析方法（OOA）的5个基本步骤。<br>识别对象（包括标识潜在的对象和筛选对象两步）；识别对象的属性；识别对象的行为；识别对象所属的类；定义主题词。</p>
+</li>
+<li><p>(简答题)软件工程的目标有哪些？<br>使软件开发的成本能够控制在预计的合理范围内；使软件产品的各项功能和性能都能够满足用户需求；提高软件产品的质量；提高软件产品的可靠性；使生产出来的软件产品便于移植、维护、升级和适用；使软件产品的开发周期能够控制在预计的合理时间范围内。</p>
+</li>
+<li><p>(简答题)什么是面向对象方法？简述其优势。<br>面向对象方法就是主张从客观世界固有的事物出发来构建系统，提倡用人类在现实生活中常用的思维方法来认识、理解和描述客观事物，强调最终建立的系统能够映射问题域，也就是说，系统中的对象以及对象之间的关系能够如实反映问题域中固有的事物及其关系。</p>
+</li>
+<li><p>(简答题)简述对象、类、抽象、封装、泛化与多态的概念。<br>对象：一个具有状态、行为和标识符的实体，并且对象之间往往可以通过通信相互交互。</p>
+</li>
+</ol>
+<p>类：拥有共同的结构、行为和语义的一组对象的抽象。</p>
+<p>抽象：揭示一个事物区别于其他事物的本质特征，去除从某一角度看来不重要的细节的行为。</p>
+<p>封装：对其客户隐藏对象的属性和实现细节，仅对外公开接口，并控制在程序中属性的读取和修改的访问级别。</p>
+<p>泛化：类元的一般描述和具体描述之间的关系，具体描述建立在一半描述的基础之上，并对其进行了扩展。</p>
+<p>多态：在同一接口下表现多种行为的能力，是面向对象技术的根本特征。</p>
+<ol start="22">
+<li>(简答题)简述软件危机产生的原因？<br>随着软件规模的扩大，复杂性的增加，功能的增强，使用早期的自由软件开发方式使得高质量的软件开发变得越来越困难。</li>
+</ol>
+<h1 id="第二章简答题"><a href="#第二章简答题" class="headerlink" title="第二章简答题"></a>第二章简答题</h1><ol start="19">
+<li><p>(简答题)简述统一建模语言(UML)<br>统一建模语言(UML)是一种绘制软件蓝图的标准语言。可以用UML对软件密集型系统的制品进行可视化详述和文档化。UML是一种定义良好、易于表达、功能强大且普遍适用的可视化建模语言。它融入了软件工程领域的新思想、新方法和新技术。它的作用域不限于支持面向对象的分析与设计，还支持从需求分析开始的软件开发的全过程。UML的作用就是用很多图从静态和动态方面来全面描述我们将要开发的系统。</p>
+</li>
+<li><p>(简答题)简述建模的几点基本原理。<br>第一，选择创建什么模型对如何解决问题和如何形成相应解决方案意义深远。第二，可以在不同的层次级别上表示不同模型。第三，最好的模型总是与现实世界联系密切。第四，单个模型或视图是不充分的。</p>
+</li>
+<li><p>(简答题)谈谈统一建模语言出现的意义<br>UML的出现可以帮助开发团队以一种可视化的方式理解系统的功能需求。UML统一了各种方法对不同类型的系统、不同开发阶段以及不同内部概念的不同观点，从而有效地消除了各种建模语言之间不必要的差异。UML建模能力比其他面向对象建模方法更强。它不仅适合于一般系统的开发，而且对并行、分布式系统的建模尤为适宜。使用UML使硬件组件和软件组件之间将会有更大的透明度。便携性和综合效率将会增加。</p>
+</li>
+<li><p>(简答题)简述UML的应用范围<br>UML最广泛的应用是对软件系统进行建模，但它同样适用于许多非软件系统领域的系统。当UML应用于大多数软件系统的开发过程时，它从需求分析阶段到系统完成后的测试阶段都能起到重要作用。</p>
+</li>
+<li><p>(简答题)什么是模型？为什么为软件系统建模非常重要？<br>模型是用某种媒介对相同媒介或其他媒介里的一些事物的表现形式。建模对一个系统的作用包括： 捕获和精确表达项目的需求和应用领域的知识，以使全部涉众能够理解并达成一致； 完成系统设计； 分离需求与具体实现细节； 帮助生成有用的工作产品； 方便研究多种解决方案； 全面把握复杂的系统。</p>
+</li>
+</ol>
+<h1 id="第三章简答题"><a href="#第三章简答题" class="headerlink" title="第三章简答题"></a>第三章简答题</h1><ol start="24">
+<li><p>(简答题)简述UML中四种基本关系的含义和作用。<br>UML中的四中关系包括关联关系、依赖关系、泛化关系和实现关系。 关联关系用来描述不同类元的实例之间的连接。它是一种结构化的关系，指一种对象和另一种对象之间存在联系，即“从一个对象可以访问另一个对象”。 依赖关系用来描述一对模型元素之间的内在联系（语义关系）。 泛化关系类似于面向对象方法中的继承关系，是从特殊到一般的一种归纳和分类关系。 实现关系是用来描述规格说明和其实现的元素之间的连接的一种关系。其中规格说明定义了行为的说明，真正的实现由后一个模型元素来完成。</p>
+</li>
+<li><p>(简答题)简述“4+1”视图中五种视图的作用。<br>“4+1”视图包括逻辑视图、开发视图、进程视图、物理视图和场景视图。 逻辑视图将系统功能进行分解，负责反映出系统内部是如何组织和协作来实现功能的。 开发视图主要用来描述软件的各个模块的组织方式，包括源程序、程序包、支持软件、第三方库等。 进程视图主要描述系统的运行特性，侧重系统的性能和稳定性，关心系统的并发性、分布性、集成性的好坏，主要关注进程、线程、对象，并发、同步、通信等运行时概念。 物理视图主要描述硬件配置，强调系统的安装、配置、通信、拓扑结构等问题。 场景视图从项目需求入手，将四个视图结合为一个整体。可以描述一个特定视图内的构件关系，也可以描述不同视图间的构件关系。</p>
+</li>
+<li><p>(简答题)简述UML中的四种事物的含义和作用。<br>UML中的四种事物包括结构事物、行为事物、分组事物和注释事物。 结构事物通常作为UML模型的静态部分，用于描述概念元素或物理元素。 行为事物是UML模型的动态部分，用于描述UML模型中的动态元素，主要为静态元素之间产生的时间和空间上的行为动作，类似于句子中动词的作用。 分组事物是UML模型的组织部分，是用来组织系统设计的事物。 注释事物是UML模型的解释部分。这些注释事物用来描述、说明和标注模型的任何元素，简言之，就是对UML中元素的注释。</p>
+</li>
+</ol>
+<h1 id="第四章简答题"><a href="#第四章简答题" class="headerlink" title="第四章简答题"></a>第四章简答题</h1><ol start="30">
+<li>(简答题)学生管理系统中有一个模块是报到登记，具体流程是：在新生入校报到时，进行新生信息登记，记录学生的报到资料、个人基本情况的输入、查询、修改等。问题： 1.　写出在上述需求描述中出现的Actor   2.　根据上述描述绘制其用例图<br><img src="https://img-blog.csdnimg.cn/a543ea0ee01c4385841839d7c1a1c0f3.png" alt="在这里插入图片描述"></li>
+<li>(简答题)请选择UML中合适的图来描述图书管理系统中图书馆业务功能模块。该模块包括借书，还书，预约借书等功能<br><img src="https://img-blog.csdnimg.cn/bd955d17c64f46b2ac3cc8d55236223c.png" alt="在这里插入图片描述"></li>
+<li>(简答题)网络的普及带给了人们更多的学习途径，随之而来的管理远程网络教学的“远程网络教学系统”诞生了。“远程网络教学系统”的功能需求如下： 1.学生登录网站后，可以浏览课件、查找课件、下载课件、观看教学视频。 2.教师登录网站后，可以上传课件、上传教学视频、发布教学心得、查看教学心得、修改教学心得。 3.系统管理员负责对网站页面的维护、审核不合法课件和不合法教学信息、批准用户注册。 （1）学生需要登录“远程网络教学系统”后才能正常使用该系统的所有功能。如果忘记密码，可与通过“找回密码”功能恢复密码。请画出学生参与者的用例图。 （2）教师如果忘记密码，可以通过“找回密码”功能找回密码。请画出教师参与者的用例图。<br><img src="https://img-blog.csdnimg.cn/23ecd05524634115ae393469457ffbb1.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/963336bf56734f778e7d1ab8ec329e44.png" alt="在这里插入图片描述"></li>
+<li>(简答题)简述用例模型的组成元素以及建模步骤<br>组成元素有：参与者，用例，通信关联，用例规约</li>
+</ol>
+<p> 建立用例模型步骤： (1)根据系统边界确定参与者 (2)根据每个参与者确定与之相关联的用例 (3)对每个用例写出用例规约文档，调整用例模型（优化参与者与参与者之间的关系，用例与用例之间的关系）</p>
+<ol start="34">
+<li><p>(简答题)什么是用例描述？用例描述包括哪些主要部分？<br>用例描述即通过使用足够清楚的、便于理解的文字来描述一个事件流，进而来说明一个用例的行为。一般的用例描述主要包括用例名称、用例编号、参与者、用例描述、触发器、前置条件、基本事件流、扩展事件流、结论、后置条件、补充约束。</p>
+</li>
+<li><p>(简答题)用例和用例之间存在什么关系，分别在什么时候使用？<br>用例之间的关系包括泛化关系和依赖关系。 用例间的泛化关系用来表示一般用例与特殊用例间的关系。用例间最常见的两种依赖关系为包含与扩展。包含指的是基用例可以包含用例具有的行为，其中包含用例中定义的行为将被插入基用例定义的行为中。扩展指的是扩展用例对基用例行为的增强。在这一关系中，扩展用例包含了一个或多个片段，每个片段都可以插入到基用例中的一个单独的位置上，而基用例对于扩展的存在是毫不知情的。</p>
+</li>
+</ol>
+<h1 id="第五章简答题"><a href="#第五章简答题" class="headerlink" title="第五章简答题"></a>第五章简答题</h1><ol start="29">
+<li>(简答题)请根据下面的用例图设计相关类图<br><img src="https://img-blog.csdnimg.cn/4d360ceda15742a3a0c8393aaa18391c.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/d0e7198953e44bf1a2bfcae7642c9208.png" alt="在这里插入图片描述"></li>
+<li>(简答题)已知三个类A.B和C.其中类A由类B的一个实体类和类C的1个或多个实体类构成。请画出能够正确表示类A,B和C之间关系的UML类图.<br><img src="https://img-blog.csdnimg.cn/4367cfbf9a544ace8cdd113bc2f06b60.png" alt="在这里插入图片描述"></li>
+</ol>
+<h1 id="第六章简答题"><a href="#第六章简答题" class="headerlink" title="第六章简答题"></a>第六章简答题</h1><ol start="10">
+<li>(简答题)对于Vehicle（车）类和Wheel（轮子）类，存在一个一对多的关联关系。试创建一个Vehicle类的三轮车对象，与三个轮子对象存在链，有一个前轮和两个后轮。用对象图表示三轮车对象与轮子对象之间的关系。<br><img src="https://img-blog.csdnimg.cn/b3defca7199b48aaa30845c1fd83ba2a.png" alt="在这里插入图片描述"></li>
+<li>(简答题)在某出版系统中，存在出版社、图书、作者三个实体类。试对一图书对象创建对象图，并在图中表示出其与出版社对象及作者对象之间的关系。<br><img src="https://img-blog.csdnimg.cn/edc40c7364c44c3e8254a70d57a91cb2.png" alt="在这里插入图片描述"></li>
+</ol>
+<h1 id="第七章简答题"><a href="#第七章简答题" class="headerlink" title="第七章简答题"></a>第七章简答题</h1><ol start="15">
+<li>(简答题)在某系统中存在三个逻辑部分，分别是Business包、DataAccess包和Common包，其中Business包需要导入DataAccess包和Common包，DataAccess包需要导入Common包。在类图中试着创建这些包，并绘制其关系。<br><img src="https://img-blog.csdnimg.cn/f94451391978470f90af1263fde6d880.png" alt="在这里插入图片描述"></li>
+</ol>
+<h1 id="第八章简答题"><a href="#第八章简答题" class="headerlink" title="第八章简答题"></a>第八章简答题</h1><ol start="22">
+<li>(简答题)图书管理系统功能性需求说明如下: 1.图书管理系统能够为一定数量的借阅者提供服务。每个借阅者能够拥有唯一标识其存在的编号。图书馆向每一个借阅者发放图书证，其中包含每一个借阅者的编号和个人信息。提供的服务包括：提供查询图书信息、查询个人信息服务和预定图书服务等。 2.当借阅者需要借阅图书、归还书籍时需要通过图书管理员进行，即借阅者不直接与系统交互，而是通过图书管理员充当借阅者的代理和系统交互。 3.系统管理员主要负责系统的管理维护工作，包括对图书、数目、借阅者的添加、删除和修改。并且能够查询借阅者、图书和图书管理员的信息。 4.可以通过图书的名称或图书的ISBN&#x2F;ISSN号对图书进行查找。 回答下面问题： (1)该系统中有哪些参与者? (2)确定该系统中的类，找出类之间的关系并画出类图 (3)画出语境“借阅者预定图书”的时序图</li>
+</ol>
+<p>该系统中有哪些参与者?借阅者  图书管理员   系统管理员</p>
+<p>确定该系统中的类，找出类之间的关系并画出类图</p>
+<p>用户类、用户角色类、图书类、预定类、借阅类、书目类<br><img src="https://img-blog.csdnimg.cn/96e57180ccb14b289a0ed076bcdecfa4.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2cc0b84a90c94177bc8a4fcc4013255f.png" alt="在这里插入图片描述"><br>23. (简答题)在某一学生指纹考勤系统中，有一个用例名为“上课登记”。此用例允许学生在上课前使用系统识别自己的指纹信息进而识别自己的身份，同时系统可以将登录信息存储在数据库中。 “上课登记”用例的主要事件流如下：  学生从系统菜单中选择“上课登记”；  系统显示指纹识别界面；  学生将手指放置于界面上；  系统捕获并识别学生的指纹，向学生返回识别的身份信息；  学生选择“确认”按钮； 系统生成一个关于该登记学生及当前日期、时间的新记录，并将该记录保存到数据库中。 请根据以上描述绘制“上课登记”用例的顺序图。<br><img src="https://img-blog.csdnimg.cn/f97a9f22484241e28c64b472964dec32.png" alt="在这里插入图片描述"></p>
+<h1 id="第九章简答题"><a href="#第九章简答题" class="headerlink" title="第九章简答题"></a>第九章简答题</h1><ol start="16">
+<li>(简答题)（1） 某银行系统存款处理过程如下： ① 系统将存款单上的存款金额分别记录在存折和账目文件中。 ② 将现金存入现金库。 ③ 最后将打印后的存折还给储户。 请分析此交互过程所涉及的系统对象，并结合存款处理流程绘制通信图。<br><img src="https://img-blog.csdnimg.cn/f8518f78696b43faa4ad6ed6b839c64f.png" alt="在这里插入图片描述"></li>
+<li>(简答题)（2） 对于某在线购物系统，主要有以下三个交互过程。 ① 登录： 用户申请登录系统，系统验证用户身份的有效性。 ② 购物： 用户浏览系统的搜索页面，搜索到目标商品，并将之添加到购物车。 ③ 结算： 用户结算购物车内的所有商品，更新库存并创建订单。 绘制通信图来表示这三个交互过程。<br><img src="https://img-blog.csdnimg.cn/136b0fd02fc5410593538d34e8af6537.png" alt="在这里插入图片描述"></li>
+</ol>
+<h1 id="第十章简答题"><a href="#第十章简答题" class="headerlink" title="第十章简答题"></a>第十章简答题</h1><ol start="14">
+<li><p>(简答题)<br><img src="https://img-blog.csdnimg.cn/eee2ff876776451c9155b2881328cd6e.png" alt="在这里插入图片描述"><br>1.该图是什么图，其中的矩形框表示什么 2.该图描述了怎样的情形<br>状态图，表示就绪，运行，阻塞状态； 线程运行的基本流程如下： 当线程准备运行时，进入就绪状态，如果获得cpu时间片，就转入运行状态，运行正常结束，进入结束状态，如果在运行过程中，cpu时间片用完后还没有完成任务，就进入就绪状态，等待再次得到cpu时间片，如果线程在运行过程中，不满足所须资源，就进入阻塞状态，处于阻塞状态的线程得到相关资源后，进入就绪状态，依次循环。</p>
+</li>
+<li><p>(简答题)简述简单状态和复合状态的异同。<br>简单状态都是不包含嵌套子结构的； 而复合状态是指包含有一个或多个嵌套状态机的状态。</p>
+</li>
+<li><p>(简答题)当手机开机时，它处于空闲状态，当用户使用电话呼叫某人时，手机进入拨号状态。如果呼叫成功，即电话接通，手机就处于通话状态； 如果呼叫不成功，例如对方线路有问题或关机，则拒绝接听。这时手机停止呼叫，重新进入空闲状态，手机在空闲状态下被呼叫，手机进入响铃状态（ringing）； 如果用户接听电话（pick），手机处于通话状态； 如果用户未做出任何反应，可能他没有听见铃声，手机一直处于响铃状态； 如果用户拒绝来电，手机回到空闲状态。请按以上描述绘制出使用手机的状态机图。<br> <img src="https://img-blog.csdnimg.cn/58562e44ae934356864b8ff2e761ded8.png" alt="在这里插入图片描述"></p>
+</li>
+<li><p>(简答题)简单的数字手表表面上有一个显示屏和两个设置按钮A和B，有两种操作模式： 显示时间和设定时间。在显示时间模式下，手表会显示小时数和分钟数，小时数和分钟数由闪烁的冒号分隔。设定时间模式有两种子模式： 设定小时和设定分钟。按钮A选择模式，每次按下此按钮时，模式会连续前进： 设定小时、设定分钟等。在子模式内，每次只要按下按钮B，就会拨快小时或分钟。绘制一个数字手表的状态机图。<br> <img src="https://img-blog.csdnimg.cn/7bbca808dbd74101940f1776dc44a75e.png" alt="在这里插入图片描述"></p>
+</li>
+<li><p>(简答题)简述状态机图的组成要素。<br>状态机图的主要元素是状态，各状态由转移连接在一起。此外，伪状态和复合状态也是其组成元素。</p>
+</li>
+</ol>
+<h1 id="第十一章简答题"><a href="#第十一章简答题" class="headerlink" title="第十一章简答题"></a>第十一章简答题</h1><ol start="24">
+<li><p>(简答题)简述活动图和普通流程图的异同。<br>事实上活动图是在流程图的基础上添加了大量软件工程术语而成的改进版。具体地说，活动图的表达能力包括了逻辑判断、分支甚至并发，所以活动图的表达能力要远高于流程图： 流程图仅仅展示一个固定的过程，而活动图可以展示并发和控制分支，并且可以对活动与活动之间信息的流动进行建模。可以说，活动图在表达流程的基础上继承了一部分协作图的特点，即可以适当表达活动之间的关系。</p>
+</li>
+<li><p>(简答题)某学生选课系统的查询课程用例如下： 学生首先进入选课系统，然后输入要查询的课程名，系统验证输入的课程名是否存在，若存在，则跳转到对应的显示课程信息的页面； 若不存在，则给出提示信息，返回选课页面。 请根据以上描述绘制活动图。<br><img src="https://img-blog.csdnimg.cn/20dc5dbae8d64ef2a74d2d611f04bd52.png" alt="在这里插入图片描述"></p>
+</li>
+<li><p>(简答题)在机票预订系统中，使用系统的用户必须先注册一个自己的账号，其过程为输入注册信息、验证信息完整、提交信息、系统进行验证（是否重名等等），如果验证均通过，则注册成功，否则失败。 请根据以上描述，对用户注册用例画出活动图。<br><img src="https://img-blog.csdnimg.cn/2ed4a47599164040a477ed31706d5ac6.png" alt="在这里插入图片描述"></p>
+</li>
+</ol>
+<h1 id="第十二章简答题"><a href="#第十二章简答题" class="headerlink" title="第十二章简答题"></a>第十二章简答题</h1><ol start="15">
+<li><p>(简答题)已知某系统包括三个组件，分别命名为MainProg、PrintProg与Database。其中，PrintProg组件提供IPrint接口供MainProg使用，MainProg组件在运行时直接依赖于Database组件的存在。请对以上所描述的三个组件绘制出相应的组件图。<br><img src="https://img-blog.csdnimg.cn/5aaea39098154dfab4c552831d81347f.png" alt="在这里插入图片描述"></p>
+</li>
+<li><p>(简答题)目前住院病人主要由护士护理，这样做不仅需要大量护士，而且由于不能随时观察危重病人的病情变化，还会延误抢救时机。某医院打算开发一个以计算机为中心的患者监护系统。医院对患者监护系统的基本要求是随时接收每个病人的生理信号（脉搏、体温、血压、心电图等），定时记录病人情况，以形成患者日志。当某个病人的生理信号超出医生规定的安全范围时，向值班护士发出警告信息。此外，护士在需要时还可以要求系统打印出某个指定病人的病情报告。 设计阶段拟将系统分为五个主要组件： 用户界面、系统控制、病人监护、患者日志实体与数据库。请根据情境描述，结合设计阶段提出的五个组件绘制组件图。</p>
+</li>
+</ol>
+<p>首先确定出系统所需的五个组件： UserInterface、SystemController、Entity、PatientObserver以及Database。其中Entity组件需要依赖于Database组件，SystemController组件和PatientObserver组件均需要依赖于Entity组件，UserInterface组件要依赖于SystemController组件和PatientObserver组件。<br><img src="https://img-blog.csdnimg.cn/1f787bc44ee6449395741ec6c858d1d7.png" alt="在这里插入图片描述"></p>
+<h1 id="第十三章简答题"><a href="#第十三章简答题" class="headerlink" title="第十三章简答题"></a>第十三章简答题</h1><ol start="11">
+<li><p>(简答题)简述部署图的建模方法。<br>部署图的意义在于对各种系统的静态部署视图进行建模。使用部署图对系统建模，可以遵循以下步骤： 将设备建模为节点； 使用构造型对不同种类的节点进行限制说明； 在节点之间建立关系； 添加注释和约束。</p>
+</li>
+<li><p>(简答题)某自动售货机系统部署时存在三个节点，分别为远程服务器、售货机、客户端。远程服务器负责一些数据存储工作； 售货机是自动售货机机器中的有处理和计算能力的部分； 客户端是机器中直接和用户进行交互的硬件部分。 其中售货机部分和客户端部分通过机器直接相连，售货机通过无线网络与远程服务器通信。 请根据以上描述绘制部署图。</p>
+</li>
+</ol>
+<p>首先确定系统所需的三个节点： Client、SodaMachine与RemoteServer，其中Client节点是设备，另外两个节点是处理器。然后根据节点之间通信方式在节点之间建立带有构造型的关联。部署图可参考下图。<br><img src="https://img-blog.csdnimg.cn/5e5b6e727d2c47bab6c5ece18c353124.png" alt="在这里插入图片描述"><br>13. (简答题)为什么要将处理器和设备分开处理？谈谈你的理解。</p>
+<p>既然我们把节点这些硬件资源纳入考虑当中，就必然少不了要从其特性出发来分析它们的运行时特性，如运算速度、内存大小等问题，因为这些问题可能是最终限制软件性能，或者强化软件运行效率的关键参数。这些节点的附加特性UML没有进行预定义，因此需要使用构造型或标记值自行创建。</p>
+<h1 id="第十四章简答题"><a href="#第十四章简答题" class="headerlink" title="第十四章简答题"></a>第十四章简答题</h1><ol start="17">
+<li><p>(简答题)RUP统一过程中的四个阶段？<br>初始阶段 、细化阶段、构造阶段、提交阶段</p>
+</li>
+<li><p>(简答题)简述RUP的静态结构，并解释工作者、活动、制品和工作流的概念。<br>过程的静态结构即“谁在什么时候要用什么方法做什么”，包括工作者、活动、制品和工作流。 工作者定义了软件开发工作中某个工作单位的行为和责任，这个工作单位可能指某个个体，或者某个工作小组。 活动定义了一件事或一个动作，并且必须存在一个特定的工作者角色负责执行这个活动。 制品描述了一个过程中产生、修改或使用的事物。 工作流就是展示一个活动的可见价值的流程，可以描述活动的操作顺序以及工作者之间的交互关系等。</p>
+</li>
+<li><p>(简答题)简述RUP中的核心工作流。<br>在RUP中，软件开发的全过程被分划成九个核心工作流，每一项工作中的工作者和活动依照逻辑规则被列入某一个或几个工作流中。这九个核心工作流中，有六个属于核心工程工作流： 业务建模工作流、需求工作流、分析与设计工作流、实现工作流、测试工作流、部署工作流。而另外三个属于核心支持工作流： 项目管理工作流、配置与变更管理工作流、环境工作流。</p>
+</li>
+</ol>
+<h1 id="第一章判断题"><a href="#第一章判断题" class="headerlink" title="第一章判断题"></a>第一章判断题</h1><ol start="9">
+<li>(判断题)对象的自治性指的是对象是完全封闭的，不受任何外界影响。 错</li>
+<li>(判断题)类是面向对象程序中的构造単位，也是面向对象程序设计语言的基本成分。  对</li>
+<li>(判断题)C语言对面向对象的发展起到了重要作用。 错</li>
+<li>(判断题)面向对象方法中的对象是从客观世界中抽象出来的一个集合体。 对</li>
+<li>(判断题)面向对象可以保证开发过程中的需求变化完全不会导致系统结构的变化。 错</li>
+<li>(判断题)面向对象方法就是使用面向对象的程序设计语言进行编程。  错</li>
+<li>(判断题)软件就是程序，编写软件就是编写程序。  错</li>
+<li>(判断题)软件危机的只要表现就是软件需求增加，软件价格上升。  错</li>
+</ol>
+<h1 id="第二章判断题"><a href="#第二章判断题" class="headerlink" title="第二章判断题"></a>第二章判断题</h1><ol start="9">
+<li>(判断题)UML适用于以体系结构为中心的开发过程，但不适合在具有迭代特征的开发过程中使用。 错</li>
+<li>(判断题)UML是一种直观化、明确化、构建和文档化软件产物的通用语言。    对</li>
+<li>(判断题)UML提供了一些方法可以让用户创建出新的模型元素。  对</li>
+<li>(判断题)在UML这个名称出现之前，James Rumbaugh和Grady Booch的合并OMT和Booch工作成果被称为UML0.8。   对</li>
+<li>(判断题)1997年11月，UML 1.1规范被OMG全体成员通过，正式被采纳为规范。  对</li>
+<li>(判断题)UML既是一门建模语言，也可以作为一门编程语言。   错</li>
+<li>(判断题)在UML出现之前，众多不同的面向对象的方法同时存在，给用户带来了一定困扰。 对</li>
+<li>(判断题)UML 2.0的出现彻底推翻了UML 1.x中的核心概念，发展成了一门与之前截然不同的建模语言。  错</li>
+<li>(判断题)UML是一种建模语言，是一种标准的表示，是一种方法。   错</li>
+<li>(判断题)UML支持面向对象的主要概念，并与具体的开发过程相关。  错</li>
+</ol>
+<h1 id="第三章填空题"><a href="#第三章填空题" class="headerlink" title="第三章填空题"></a>第三章填空题</h1><ol start="21">
+<li><p>(填空题)状态图和类图、顺序图不同之处在于，后两种图能够对______建立模型，而状态图只是对______建立模型。<br>(1) 多个对象<br>(2) 1个对象</p>
+</li>
+<li><p>(填空题)UML背后的两个重量级概念是______和______。<br>(1) 用例<br>(2) 面向对象</p>
+</li>
+<li><p>(填空题)软件体系结构是指一个系统的有目的的设计和规划，这个设计规划既不描述______，也不描述___ ，它只描述系统的 ___及其相互的______。<br>(1) 活动<br>(2) 系统怎样开发<br>(3) 组成元素<br>(4) 交互协作</p>
+</li>
+</ol>
+<h1 id="第四章判断题"><a href="#第四章判断题" class="headerlink" title="第四章判断题"></a>第四章判断题</h1><ol start="18">
+<li>(判断题)在用例图中，Actor仅代表与目标系统进行交互的人。 错</li>
+<li>(判断题)在两个用例中，如果一个用例拥有另一个用例的所有结构、行为和关系，并在此基础上增加了新的特性，则此两个用例之间可以用泛化关系表示。 对 </li>
+<li>(判断题)用例的包含关系与扩展关系在表示法上相似，都是将虚线箭头从基用例指向包含用例（扩展用例）。 错</li>
+<li>(判断题)如果两个用例构成包含关系，则在基用例执行过程中，包含用例一定会执行至少一次。  对</li>
+<li>(判断题)用例元素本身就可以描述该用例所表达的事件或交互过程。   错</li>
+<li>(判断题)用例描述中的前置条件与后置条件分别指的是用例执行前和执行后系统与参与者所处的状态。   对</li>
+<li>(判断题)在用例图中，一个参与者一定对应于现实中的某个特定对象。   错</li>
+<li>(判断题)用例图中的参与者可能对应于现实世界中的人，也可能是其他与系统有交互的事物。   对</li>
+<li>(判断题)参与者就是那些为系统提供输入的人或事物。   错</li>
+<li>(判断题)在用例图中，用例必须由相应的参与者来发起或执行。    对</li>
+<li>(判断题)在绘制用例图时，其中用例的粒度越细越好。   错</li>
+<li>(判断题)参与者位于系统边界外，并不是系统的一部分。   对</li>
+</ol>
+<h1 id="第五章判断题"><a href="#第五章判断题" class="headerlink" title="第五章判断题"></a>第五章判断题</h1><ol start="21">
+<li>(判断题)里氏替换原则的主要内容是“父类对于子类应该是完全可替换的”。   错</li>
+<li>(判断题)假设班级类（Class）与学生类（Student）之间建立了关联关系，并且约定一个班级至少拥有一个学生，每个学生只能属于一个班级，则关联关系的班级类一端的多重性应设为1..*。   错</li>
+<li>(判断题)在UML中，当接口使用小圆圈表示时，该接口与其他类的实现关系可以被简化为一条实线段。   对</li>
+<li>(判断题)模板类在其参数未确定时，无法创建直接实例。   对</li>
+<li>(判断题)类图主要通过系统中的类及类之间的关系来描述系统的动态结构。   错</li>
+<li>(判断题)任何一个类都必须具有一定数量的属性与操作。   错</li>
+<li>(判断题)接口中的操作不应该包含其具体实现。   对</li>
+<li>(判断题)接口与抽象类的概念是完全相同的。   错</li>
+</ol>
+<h1 id="第六章判断题"><a href="#第六章判断题" class="headerlink" title="第六章判断题"></a>第六章判断题</h1><ol start="5">
+<li>(判断题)在UML中，对象和类的表示法完全相同。    错</li>
+<li>(判断题)链是关联关系的实例，是两个或多个对象之间的独立连接。   对</li>
+<li>(判断题)每一个对象图只是系统的静态设计视图或静态交互视图的图形表示。   对</li>
+<li>(判断题)对象图显示了某一时刻的一组对象及它们之间的关系。   对</li>
+<li>(判断题)类图可被看作是对象图的实例。   错</li>
+</ol>
+<h1 id="第七章判断题"><a href="#第七章判断题" class="headerlink" title="第七章判断题"></a>第七章判断题</h1><ol start="7">
+<li>(判断题)包之间表示依赖关系的虚线箭头指向被依赖的包的一方。   对</li>
+<li>(判断题)包中可见性修饰为public的元素表示这些元素可以被项目中的所有包无条件地访问。   错</li>
+<li>(判断题)包的路径名使用前缀来表示出上层包的名称。   对</li>
+<li>(判断题)UML中的所有模型元素都可以被直接包含在包中。   对</li>
+<li>(判断题)包内元素的可见性表示同一个包内的其他元素对该元素的访问权限。   错</li>
+<li>(判断题)在UML中，每个元素只能被包含在一个包中。 对</li>
+<li>(判断题)包只能用来组织UML中的事物，而无法用来组织UML图。   错</li>
+<li>(判断题)包元素是UML中最重要的结构事物之一。   错</li>
+</ol>
+<h1 id="第八章判断题"><a href="#第八章判断题" class="headerlink" title="第八章判断题"></a>第八章判断题</h1><ol start="13">
+<li>(判断题)每条消息一定关联着至少两个不同的对象，即消息的发送者和接收者。   错</li>
+<li>(判断题)在顺序图中，如果一个对象在接收到消息时还没有被激活，那么这条消息将会激活这个对象。    对</li>
+<li>(判断题)顺序图虽然能表示消息发送的事件顺序，却无法量化地表示出消息发送的具体时间。   对</li>
+<li>(判断题)顺序图中的对象可以在交互开始时已经存在，也可以在交互过程中才被创建。   对</li>
+<li>(判断题)在顺序图中，对象的生命线一定会贯穿整个交互过程。   错</li>
+<li>(判断题)在顺序图中，所有对象的生命线一定会被一个销毁标记所结束。   错</li>
+<li>(判断题)激活表示在这一时间段内对象正在完成某项任务。   对</li>
+<li>(判断题)顺序图从时间顺序上显示了交互过程中信息的交换。   对</li>
+<li>(判断题)顺序图中元素的摆放顺序无关紧要。   错</li>
+</ol>
+<h1 id="第九章判断题"><a href="#第九章判断题" class="headerlink" title="第九章判断题"></a>第九章判断题</h1><ol start="6">
+<li>(判断题)因为通信图无法表示出对象在交互时的激活，顺序图也无法表示出交互过程中对象间的链，因此两种图所表达的语义是完全不等价的。   错</li>
+<li>(判断题)与关联关系相似，UML也允许对象自身与自身之间建立一条链。   对 </li>
+<li>(判断题)在通信图中，只有通过链连接的对象才能进行消息传递和交互。   错</li>
+<li>(判断题)在通信图中出现的链是静态关联的实例。   错</li>
+<li>(判断题)就语义和表示法而言，通信图中的消息与顺序图中的消息完全相同。   对</li>
+<li>(判断题)通信图是表现对象协作关系的图，它展现了多个对象在协同工作达成共同目标的过程中互相通信的情况。    对</li>
+<li>(判断题)通信图的主要组成元素包括对象、链、生命线和消息。   错</li>
+<li>(判断题)通信图中应该表示出交互发生的时刻系统中存在的所有对象。   错</li>
+<li>(判断题)由于交互时可能会有一组同类型的对象在交互中执行同一个操作，因此通信图提供了多重对象的概念。    对</li>
+<li>(判断题)通信图将对象和时间作为两个维度在图中表示。   错</li>
+</ol>
+<h1 id="第十一章判断题"><a href="#第十一章判断题" class="headerlink" title="第十一章判断题"></a>第十一章判断题</h1><ol start="14">
+<li>(判断题)在活动图中，合并节点仅有逻辑意义而没有时间和数据上的意义。   对</li>
+<li>(判断题)结合节点与合并节点相似，当控制流进行到该节点时都不需要等待其他控制流的到达。   错</li>
+<li>(判断题)活动图可以像流程图一样表达出顺序、分支及循环控制结构，但语义要比流程图丰富得多。   对</li>
+<li>(判断题)活动图可以在逻辑顺序角度对用例中的各个交互的流进行建模。   对</li>
+<li>(判断题)活动图中必须有且只能有一个开始标记。   对</li>
+<li>(判断题)活动图的控制流与状态图中的转换是语义完全相同的元素。   错</li>
+<li>(判断题)泳道按活动发生的时间将活动图划分为几部分。   错</li>
+<li>(判断题)一个活动不可能属于多个泳道。   对</li>
+<li>(判断题)活动图是一种用于表达系统动态特性的UML图。   对</li>
+<li>(判断题)活动本身是一个原子操作，是不可被中断的。   错</li>
+</ol>
+<h1 id="第十二章判断题"><a href="#第十二章判断题" class="headerlink" title="第十二章判断题"></a>第十二章判断题</h1><ol start="8">
+<li>(判断题)请求接口（Required Interface）用于定义一个构件所提供的服务。    错</li>
+<li>(判断题)组件是组件图中语义最小的元素。   错</li>
+<li>(判断题)组件是一个封装完好的物理实现单元，与外部完全分离。    对</li>
+<li>(判断题)组件比类的抽象层次要高，类应该从属于某个组件。   对</li>
+<li>(判断题)组件是系统工作产品的一部分，因此exe文件是一个组件，而程序的源文件不能作为一个组件。   错</li>
+<li>(判断题)组件与其提供的接口之间构成依赖关系。   错</li>
+<li>(判断题)在组件图中，组件之间的依赖关系表示组件在某些行为上的对其他组件的依赖。   对</li>
+</ol>
+<h1 id="第十三章判断题"><a href="#第十三章判断题" class="headerlink" title="第十三章判断题"></a>第十三章判断题</h1><ol start="6">
+<li>(判断题)部署图中节点之间的关联关系，可以对其应用构造型来表示不同类型的通信路径或者通信的实现方式。   对</li>
+<li>(判断题)如果开发的软件只运行在一台机器上且所有与机器交互的设备都已经由操作系统进行连接，这类软件就不必对其设计部署图。   对</li>
+<li>(判断题)部署图与组件图都是用来对系统的物理方面进行建模，因此二者所表达的语义是完全相同的。   错</li>
+<li>(判断题)节点就是一台计算机      错</li>
+<li>(判断题)在部署图中，节点之间可以建立来表示节点的通信      对</li>
+</ol>
+<h1 id="第十四章判断题"><a href="#第十四章判断题" class="headerlink" title="第十四章判断题"></a>第十四章判断题</h1><ol start="10">
+<li>(判断题)在起始阶段和转化阶段均可以使用到用例图。   对</li>
+<li>(判断题)核心工作流在不同的阶段中可以有所重叠，但各个主要阶段不重叠。   对</li>
+<li>(判断题)RUP的两个阶段之间交接的重要条件被称为迭代条件。   错</li>
+<li>(判断题)RUP的核心工作流有九个，其中六个属于核心工程工作流，三个属于核心支持工作流   对</li>
+<li>(判断题)RUP过程的静态结构通常用“活动”“制品”“参与者”和“工作流”的术语描述。   错</li>
+<li>(判断题)迭代过程指的是在某一个工作流中重复执行工作。   错</li>
+<li>(判断题)制品指的是软件产品，可以有测试版或发布版的可执行文件，但不包括文档。错</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="http://example.com">John Doe</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://example.com/2023/08/17/UML%E5%AD%A6%E4%B9%A0%E9%A2%98%E5%BA%93/">http://example.com/2023/08/17/UML%E5%AD%A6%E4%B9%A0%E9%A2%98%E5%BA%93/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2023/08/17/Java%E5%9F%BA%E7%A1%80/" title="Java基础"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Java基础</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0%E9%80%89%E6%8B%A9%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">第一章选择题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0%E9%80%89%E6%8B%A9%E9%A2%98"><span class="toc-number">2.</span> <span class="toc-text">第二章选择题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0%E9%80%89%E6%8B%A9%E9%A2%98"><span class="toc-number">3.</span> <span class="toc-text">第三章选择题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0%E9%80%89%E6%8B%A9%E9%A2%98"><span class="toc-number">4.</span> <span class="toc-text">第四章选择题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0%E9%80%89%E6%8B%A9%E9%A2%98"><span class="toc-number">5.</span> <span class="toc-text">第五章选择题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0%E9%80%89%E6%8B%A9%E9%A2%98"><span class="toc-number">6.</span> <span class="toc-text">第六章选择题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0%E9%80%89%E6%8B%A9%E9%A2%98"><span class="toc-number">7.</span> <span class="toc-text">第七章选择题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0%E9%80%89%E6%8B%A9%E9%A2%98"><span class="toc-number">8.</span> <span class="toc-text">第八章选择题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E7%AB%A0%E9%80%89%E6%8B%A9%E9%A2%98"><span class="toc-number">9.</span> <span class="toc-text">第九章选择题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E7%AB%A0%E9%80%89%E6%8B%A9%E9%A2%98"><span class="toc-number">10.</span> <span class="toc-text">第十章选择题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0%E6%B4%BB%E5%8A%A8%E5%9B%BE"><span class="toc-number">11.</span> <span class="toc-text">第十一章活动图</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0%E9%80%89%E6%8B%A9%E9%A2%98"><span class="toc-number">12.</span> <span class="toc-text">第十二章选择题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%89%E7%AB%A0%E9%80%89%E6%8B%A9%E9%A2%98"><span class="toc-number">13.</span> <span class="toc-text">第十三章选择题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%9B%9B%E7%AB%A0%E9%80%89%E6%8B%A9%E9%A2%98"><span class="toc-number">14.</span> <span class="toc-text">第十四章选择题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%AE%80%E7%AD%94%E9%A2%98"><span class="toc-number">15.</span> <span class="toc-text">第一章简答题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0%E7%AE%80%E7%AD%94%E9%A2%98"><span class="toc-number">16.</span> <span class="toc-text">第二章简答题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0%E7%AE%80%E7%AD%94%E9%A2%98"><span class="toc-number">17.</span> <span class="toc-text">第三章简答题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0%E7%AE%80%E7%AD%94%E9%A2%98"><span class="toc-number">18.</span> <span class="toc-text">第四章简答题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0%E7%AE%80%E7%AD%94%E9%A2%98"><span class="toc-number">19.</span> <span class="toc-text">第五章简答题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0%E7%AE%80%E7%AD%94%E9%A2%98"><span class="toc-number">20.</span> <span class="toc-text">第六章简答题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0%E7%AE%80%E7%AD%94%E9%A2%98"><span class="toc-number">21.</span> <span class="toc-text">第七章简答题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0%E7%AE%80%E7%AD%94%E9%A2%98"><span class="toc-number">22.</span> <span class="toc-text">第八章简答题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E7%AB%A0%E7%AE%80%E7%AD%94%E9%A2%98"><span class="toc-number">23.</span> <span class="toc-text">第九章简答题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E7%AB%A0%E7%AE%80%E7%AD%94%E9%A2%98"><span class="toc-number">24.</span> <span class="toc-text">第十章简答题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0%E7%AE%80%E7%AD%94%E9%A2%98"><span class="toc-number">25.</span> <span class="toc-text">第十一章简答题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0%E7%AE%80%E7%AD%94%E9%A2%98"><span class="toc-number">26.</span> <span class="toc-text">第十二章简答题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%89%E7%AB%A0%E7%AE%80%E7%AD%94%E9%A2%98"><span class="toc-number">27.</span> <span class="toc-text">第十三章简答题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%9B%9B%E7%AB%A0%E7%AE%80%E7%AD%94%E9%A2%98"><span class="toc-number">28.</span> <span class="toc-text">第十四章简答题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0%E5%88%A4%E6%96%AD%E9%A2%98"><span class="toc-number">29.</span> <span class="toc-text">第一章判断题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0%E5%88%A4%E6%96%AD%E9%A2%98"><span class="toc-number">30.</span> <span class="toc-text">第二章判断题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0%E5%A1%AB%E7%A9%BA%E9%A2%98"><span class="toc-number">31.</span> <span class="toc-text">第三章填空题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0%E5%88%A4%E6%96%AD%E9%A2%98"><span class="toc-number">32.</span> <span class="toc-text">第四章判断题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0%E5%88%A4%E6%96%AD%E9%A2%98"><span class="toc-number">33.</span> <span class="toc-text">第五章判断题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0%E5%88%A4%E6%96%AD%E9%A2%98"><span class="toc-number">34.</span> <span class="toc-text">第六章判断题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0%E5%88%A4%E6%96%AD%E9%A2%98"><span class="toc-number">35.</span> <span class="toc-text">第七章判断题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0%E5%88%A4%E6%96%AD%E9%A2%98"><span class="toc-number">36.</span> <span class="toc-text">第八章判断题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E7%AB%A0%E5%88%A4%E6%96%AD%E9%A2%98"><span class="toc-number">37.</span> <span class="toc-text">第九章判断题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0%E5%88%A4%E6%96%AD%E9%A2%98"><span class="toc-number">38.</span> <span class="toc-text">第十一章判断题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0%E5%88%A4%E6%96%AD%E9%A2%98"><span class="toc-number">39.</span> <span class="toc-text">第十二章判断题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%89%E7%AB%A0%E5%88%A4%E6%96%AD%E9%A2%98"><span class="toc-number">40.</span> <span class="toc-text">第十三章判断题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%9B%9B%E7%AB%A0%E5%88%A4%E6%96%AD%E9%A2%98"><span class="toc-number">41.</span> <span class="toc-text">第十四章判断题</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/17/UML%E5%AD%A6%E4%B9%A0%E9%A2%98%E5%BA%93/" title="Spring基础">Spring基础</a><time datetime="2023-08-17T09:36:17.000Z" title="Created 2023-08-17 17:36:17">2023-08-17</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/17/Java%E5%9F%BA%E7%A1%80/" title="Java基础">Java基础</a><time datetime="2023-08-17T07:36:17.000Z" title="Created 2023-08-17 15:36:17">2023-08-17</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/17/Spring%E5%9F%BA%E7%A1%80/" title="Spring基础">Spring基础</a><time datetime="2023-08-17T07:36:17.000Z" title="Created 2023-08-17 15:36:17">2023-08-17</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
