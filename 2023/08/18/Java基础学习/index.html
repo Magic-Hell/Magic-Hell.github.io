@@ -1,0 +1,1742 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Java基础学习 | Magic-Hell</title><meta name="author" content="MagicHell"><meta name="copyright" content="MagicHell"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="第一讲 javaSE：java Standard Edition javaME：java Micro Edition javaEE：java Enterprise Edition   JDK:java Development Kit（Java开发包）JRE:java Runtime Environment(java执行环境)JDK包含了JRE  如何查询Java版本java -version">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java基础学习">
+<meta property="og:url" content="http://example.com/2023/08/18/Java%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:site_name" content="Magic-Hell">
+<meta property="og:description" content="第一讲 javaSE：java Standard Edition javaME：java Micro Edition javaEE：java Enterprise Edition   JDK:java Development Kit（Java开发包）JRE:java Runtime Environment(java执行环境)JDK包含了JRE  如何查询Java版本java -version">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://picsum.photos/id/237/200/300">
+<meta property="article:published_time" content="2023-08-18T06:47:52.000Z">
+<meta property="article:modified_time" content="2023-08-19T08:59:40.362Z">
+<meta property="article:author" content="MagicHell">
+<meta property="article:tag" content="Java">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://picsum.photos/id/237/200/300"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2023/08/18/Java%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: 'days',
+  dateSuffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Java基础学习',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: undefined,
+  isToc: true,
+  postUpdate: '2023-08-19 16:59:40'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/background.css"><link rel="stylesheet" href="/transpancy.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">Loading...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load',() => { preloader.endLoading() })
+
+  if (false) {
+    document.addEventListener('pjax:send', () => { preloader.initLoading() })
+    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+  }
+})()</script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/touxiang.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">1</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://source.unsplash.com/random/1920x1080')"><nav id="nav"><span id="blog-info"><a href="/" title="Magic-Hell"><span class="site-name">Magic-Hell</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Java基础学习</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-08-18T06:47:52.000Z" title="Created 2023-08-18 14:47:52">2023-08-18</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-08-19T08:59:40.362Z" title="Updated 2023-08-19 16:59:40">2023-08-19</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word count:</span><span class="word-count">11.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading time:</span><span>45min</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Java基础学习"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="第一讲"><a href="#第一讲" class="headerlink" title="第一讲"></a>第一讲</h1><ul>
+<li>javaSE：java Standard Edition</li>
+<li>javaME：java Micro Edition</li>
+<li>javaEE：java Enterprise Edition</li>
+</ul>
+<hr>
+<p>JDK:java Development Kit（Java开发包）<br>JRE:java Runtime Environment(java执行环境)<br><strong>JDK包含了JRE</strong></p>
+<hr>
+<p>如何查询Java版本<br><code>java -version</code></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/eb996522e4c347a2ba80a3b6cbefbceb.png" alt="在这里插入图片描述"></p>
+<hr>
+<p>实现你的第一个Java程序{Hello World}</p>
+<ul>
+<li><p>注：所有的Java代码，其后缀都是以Java结尾</p>
+<pre><code class="Java">public class Text&#123;
+  public static void main &#123;String[] args&#125;&#123;
+       System.out.println(&quot;hello world&quot;);
+  &#125;
+&#125;
+</code></pre>
+<p>java程序的执行过程分为两步</p>
+</li>
+</ul>
+<ol>
+<li>编译 <code>Javac Text.java</code></li>
+<li>执行 <code>java Text</code><br>最后就会出现Hello World了</li>
+</ol>
+<hr>
+<p><strong>class 文件是字节码文件，程序最终执行的就是这个字节码（bytecode）文件</strong></p>
+<h1 id="第二讲"><a href="#第二讲" class="headerlink" title="第二讲"></a>第二讲</h1><p>java中的数据类型分为两类：</p>
+<ol>
+<li>原生数据类型 （primitive Data Type）</li>
+<li>引用数据类型 ｛对象类型｝（Reference Type）</li>
+</ol>
+<hr>
+<p> <strong>java中的原生数据类型共有8种</strong></p>
+<ol>
+<li>整型：使用int表示。</li>
+</ol>
+<pre><code class="java">public class Text&#123;
+    public static void main (String[] args)&#123;
+        int a;
+        a = 1;
+        System.out.println(a);    
+    &#125;
+&#125;
+</code></pre>
+<ol start="2">
+<li>字节型：使用byte表示。（表示-128~127之间的256个整数）</li>
+</ol>
+<pre><code class="java">public class Text&#123;
+    public static void main(String[] args)&#123;
+        byte b = 2;
+        System.out.println(b);
+    &#125;
+&#125;
+</code></pre>
+<ol start="3">
+<li>短整型：使用short表示。（占比16位）</li>
+<li>长整型：使用long表示。（占比64位）</li>
+<li>单精度浮点型：使用float表示。所谓浮点型，指的就是小数。也叫作实数。</li>
+<li>双精度浮点型：使用double表示。双精度浮点型表示的数据范围要比单精度浮点型要大。<br><code>即便double类型的值处于float类型的范围内也是不可以的。总之，能否成功赋值取决于等号右边的值的类型与等号左边的值的类型是否一致。</code><br><strong>问：如何将double类型转换为float类型的变量？<br>答: 强制转换，强制转换的语法是：类型 变量名 &#x3D; （类型）变量值</strong></li>
+</ol>
+<pre><code class="java">public class Text&#123;
+    public static void main (String[] args)&#123;
+        /*第一种方法*/
+        float a =(float) 1.2;//强制转换
+        System.out.println(a);
+
+        /*第二种方法*/
+        float a =1.2f;//强制转换
+        System.out.println(a);
+    &#125;
+&#125;
+</code></pre>
+<ol start="7">
+<li>字符型：使用char表示（char是character的缩写）。所谓的字符，就是单个的字符表示，比如字母a,或中文张，外面用单引号包围上，比如char a &#x3D; ‘b’; char b &#x3D; ‘张’；</li>
+</ol>
+<pre><code class="java">public class Text&#123;
+    public static void main(String[] args)&#123;
+        char a = &#39;b&#39;;
+        System.out.println(a);
+    &#125;
+&#125;
+</code></pre>
+<ol start="8">
+<li>布尔类型，使用boolean表示。布尔类型只有两种可能值，分别是true或者是flase。</li>
+</ol>
+<pre><code class="java">public class Text&#123;
+    public static void main (String[] args)&#123;
+        boolean  a = flase;
+        System.out,println(a);
+    &#125;
+&#125;
+</code></pre>
+<p><code>可以将表示范围小的值赋给表示范围大的变量，但直接不能将表示范围大的值赋给表示范围小的变量，只能通过强制类型转换实现。</code><br>​	</p>
+<h1 id="第三讲"><a href="#第三讲" class="headerlink" title="第三讲"></a>第三讲</h1><ol>
+<li>java中所有浮点类型默认情况下都是double。不能将double类型的值赋给float类型的变量，即便该double类型的值处于float类型的范围内也是不可以的。总之，能否成功赋值取决于等号右边的值的类型与等号左边的变量类型是否一致</li>
+<li><strong>如何将double类型的值赋给float类型的变量？</strong><br>强制类型转换，将double类型的值强制转换为float类型<br><strong>强制转换的语法：类型 变量名 &#x3D; （类型） 变量值</strong></li>
+<li>变量在使用前必须要赋值；变量必须要声明其类型方可使用；变量在使用前必须要定义，并且只能定义一次。</li>
+</ol>
+<h1 id="第四讲"><a href="#第四讲" class="headerlink" title="第四讲"></a>第四讲</h1><ol>
+<li>当有若干个变量参与运算时，结果类型取决于这些变量中表示范围最大的那个变量类型。</li>
+</ol>
+<p>比如：参与运算的变量中，有整型 int ， 有双精度浮点型double，有短整型short，那么最后的结果类型就是double。</p>
+<pre><code class="java">public class test&#123;
+    public static void main (String[] args)&#123;
+        int a = 1;
+        int b = 2;
+        
+        int c = a + b;//3
+        int d = a - b;//-1
+        int e = a/b;//0
+        int f = a*b;//2
+        System.out.println(c); 
+        System.out.println(d); 
+        System.out.println(e); 
+        System.out.println(f); 
+    &#125;
+&#125;
+</code></pre>
+<pre><code class="java">public class Text&#123;
+    public static void main (String[] args)&#123;
+        double a = 1;//出现double都让路
+        int b = 2;
+
+        double c = a + b;
+        double d = a - b;
+        double e = a/b;
+        double f = a*b;
+        System.out.println(c);
+        System.out.println(d);
+        System.out.println(e);
+        System.out.println(f);
+    &#125;
+&#125;
+</code></pre>
+<p>下面的代码中，a 和 b 都是整型，但是通过（double）a这种转换将a转换为一个匿名的变量，该变量的类型是double，但是要注意：a本身依旧是int类型，而不是double类型，这样。(double)a&#x2F;b就是double类型除以int类型，结果自然是double类型。</p>
+<pre><code class="java">public class Text&#123;
+    public static void main (String[] args)&#123;
+        int a = 1;
+        int b = 2;
+        double e = (double) a/b;
+        System.out.println(e);
+    &#125;
+&#125;
+</code></pre>
+<p>取模运算符：使用%表示。【取模的规律：取模的结果符号永远与被除数的符号相同】</p>
+<pre><code class="java">public class text&#123;
+   public static void main (String[] args)&#123;
+       int a = 5;
+       int b = 3;
+       int c = a % b;
+       System.out.println (c);
+   &#125;
+&#125;
+</code></pre>
+<h1 id="第五讲"><a href="#第五讲" class="headerlink" title="第五讲"></a>第五讲</h1><ol>
+<li>关系运算符：大于（&gt;），小于（&lt;），等于（&#x3D;&#x3D;）， 不等于（!&#x3D;），大于等于（&gt;&#x3D;）,小于等于（&lt;&#x3D;），关系运算的结果是个boolean值。</li>
+</ol>
+<pre><code class="java">public class text&#123;
+    public static void main (String[] args)&#123;
+        int a = 3 ;
+        int b = 2 ;
+
+        boolean c = ( a&gt;b );
+        System.out.println(c);
+    &#125;
+&#125;
+/*结果显示（true）*/
+</code></pre>
+<p>2.逻辑运算符：重点讲解两个，逻辑运算符本身也返回一个boolean值。</p>
+<p>1）逻辑与：使用&amp;&amp;表示，逻辑与是个双目运算符（即有两个操作数的运算符），只有当两个操作数都为真的时候，结果才为真；其余均为假。（逻辑与表示的并且的意思）</p>
+<pre><code class="java">public class test &#123;
+    public static void main (String[] args)&#123;
+        int a = 1;
+        int b = 2;
+        int c = 3;
+        int d = 4;
+        
+        boolean e = (a &lt; b) &amp;&amp; (c &lt; d);
+        System.out.println(e);
+    &#125;
+&#125;
+/*结果显示：true*/
+</code></pre>
+<p>2）逻辑或：使用||表示，逻辑或也是个双目运算符，只有当两个操作数都为假的时候，结果才为假；其余情况都为真。（逻辑或表示或者的意思）</p>
+<pre><code class="java">public static void main(String[] args)&#123;
+        int a = 1;
+        int b = 2;
+        int c = 3;
+        int d = 4;
+
+        boolean e = (a&lt;b)||(c&lt;d);
+        System.out.println(e);
+    &#125;
+&#125;
+/*结果显示：true*/
+</code></pre>
+<p>3）关于逻辑运算符的短路特性。</p>
+<ol>
+<li><p>逻辑与：如果第一个操作数为flase，那么结果肯定就是flase，所以在这种情况下，，将不会执行后面的运算了，即发现了短路现象。</p>
+</li>
+<li><p>逻辑或：如果第一个操作数为true，那么结果肯定就是true，所在在这种情况下，将不会执行逻辑或后面的运算了，即发生了短路现象</p>
+</li>
+</ol>
+<pre><code class="java">public class test &#123;
+    public static void main (String[] args)&#123;
+        int a = 1;
+        int b = 2;
+        int c = 3;
+        int d = 4;
+        int f = 5;
+        boolean e = (a &gt; b)||((f = c) &lt; d);
+        System.out.println(e); 
+        System.out.println(f);
+   &#125;
+&#125;
+/* 结果是：true
+          5
+*/
+</code></pre>
+<p>4）关于变量的自增与自减运算<br>1.关于 int b &#x3D; a++,作用是将a的值先赋给b，然后再让a自增1。<br>2.关于 int b &#x3D; ++a,作用是将a的值先自增1，然后将自增后的结果赋给b。</p>
+<pre><code class="java">public class test &#123;
+    public static void main (String [] args)&#123;
+        int a = 3;
+        //a += 1;//等价于 a = a + 1;
+        a++;
+        
+        System.out.println(a);
+    &#125;
+&#125;
+/*结果是：4*/
+</code></pre>
+<pre><code class="java">public class test &#123;
+    public static void main (String [] args)&#123;
+        int a = 3;
+        //a += 1;//等价于 a = a + 1;
+        ++a;
+        
+        System.out.println(a);
+    &#125;
+&#125;
+/*结果是：4
+</code></pre>
+<pre><code class="java">public class test &#123;
+    public static void main (String [] args)&#123;
+        int a = 3;
+        //a += 1;//等价于 a = a + 1;
+        a--;
+        
+        System.out.println(a);
+    &#125;
+&#125;
+/*结果是：2*/
+</code></pre>
+<pre><code class="java">public class test &#123;
+    public static void main (String [] args)&#123;
+        int a = 3;
+        //a += 1;//等价于 a = a + 1;
+        --a;
+        
+        System.out.println(a);
+    &#125;
+&#125;
+/*结果是：2*/
+</code></pre>
+<h1 id="第七讲"><a href="#第七讲" class="headerlink" title="第七讲"></a>第七讲</h1><ol>
+<li>java中的循环控制语句一共有三种，分别是while，do…while以及for循环。<br>1）while循环，形式为：</li>
+</ol>
+<pre><code class="Java">while (布尔表达式)&#123;
+    //待执行的代码
+&#125;
+</code></pre>
+<pre><code class="java">public class Text&#123;
+    public static void main (String[] args)&#123;
+        int a = 1;//循环变量
+        int sum = 0;//存储相加后的变量
+        
+        while(a &lt;= 100)&#123;
+            sum += a;
+            a++;76
+    &#125;
+&#125;
+/*结果是：5050*/
+</code></pre>
+<p>​                 2）do……while循环，形式为：</p>
+<pre><code class="Java">do&#123;
+    //待执行的代码
+&#125;while(布尔表达式);
+</code></pre>
+<pre><code class="java">public class test &#123;
+    public static void main (String[] args)&#123;
+        int a = 1;
+        int sum = 0;
+
+        do&#123;
+            sum += a;
+            a++;
+        &#125;while(a&lt;=100);
+        System.out.println(sum);
+    &#125;
+&#125;
+/*结果是：5050*/
+</code></pre>
+<p>while与do……while之间的区别：如果布尔表达式的第一次判断就为false，那么while循环一次也不执行；do…….while循环则会执行一次。如果布尔表达式第一次判断为true，那么while循环与do…….while循环等价。<br>3）for循环（使用最多的一种循环），形式为：</p>
+<pre><code class="Java">for(变量初始化；条件判断；步进)&#123;
+   //待执行的代码
+&#125;
+</code></pre>
+<p>for循环的执行过程：<br>1）执行变量初始化。<br>2）执行条件判断。如果条件判断结果为假，那么退出for循环，开始执行循环后面的代码；如果条件判断为真，执行for循环里面的代码。<br>3）执行步进。<br>4）重复步骤2。</p>
+<pre><code class="java">public class test&#123;
+    public static void main (String[] args)&#123;
+        int sum = 0;//存储相加后的结果
+        for(int i = 1; i &lt;= 100;i++)&#123;
+            sum += i;
+        &#125;
+        System.out.println(sum);
+    &#125; 
+&#125;
+</code></pre>
+<h1 id="第八讲"><a href="#第八讲" class="headerlink" title="第八讲"></a>第八讲</h1><p><strong>理想面对程序对象</strong></p>
+<ol>
+<li>break语句：经常用在循环语句中，用于跳出整个循环，执行循环后面的代码。</li>
+</ol>
+<pre><code class="java">public class Text&#123;
+    public static void main (String[] args)&#123;
+        for(int i = 0;i &lt; 10 ; i++)&#123;
+            if(5 == i)&#123;
+                break;
+            &#125;
+            System.out.println(i);
+        &#125;
+    &#125;
+&#125;
+/*结果是：
+0
+1
+2
+3
+4
+*/
+</code></pre>
+<p>2.continue语句：经常用在循环语句中，用于跳出当前的这个循环（或者是跳出本次循环），开始下一次循环的执行。</p>
+<pre><code class="java">public class Text&#123;
+    public static void main (String[] args)&#123;
+        for(int i = 0;i &lt; 10 ; i++)&#123;
+            if(5 == i)&#123;
+                continue;
+            &#125;
+            System.out.println(i);
+        &#125;
+    &#125;
+&#125;
+/*结果是：
+0
+1
+2
+3
+4
+6
+7
+8
+9
+*/
+</code></pre>
+<p>3.break与continue可以搭配标签使用，在实际开发中，根本没有人会将break与continue搭配标签来使用。</p>
+<pre><code class="java">public class Text&#123;
+    public static void main (St  ring[] args)&#123;
+        for(int i = 0;i &lt; 3; i++)&#123;
+            if(1 == i)&#123;
+                break;
+            &#125;
+            for (int j = 0 ; j &lt;= i; ++j)&#123;
+                if(1 == j)&#123;
+                    continue;
+                &#125;
+                System.out.println(&quot;j=&quot;+j);
+            &#125;
+            System.out.println(&quot;i=&quot;+i);
+        &#125;
+    &#125;
+&#125;
+/*结果是：
+j=0
+i=0
+*/
+</code></pre>
+<p>4.面向对象程序设计（object oriented programming;oop）<br>1)什么是面向对象？<br>在面向对象程序设计中有两个重要的概念：类（class）与对象（object）。<br>2）类<br>类是一种抽象概念，类包含了数据（通常使用名词来表示）与对数据的操纵（通常使用动词来表示）。比如说人就是一种抽象的概念，人具有姓名、年龄、身高等数据，还有吃饭、跑步等操纵数据的动作。<br><strong>类包含两个内容</strong></p>
+<pre><code>a）数据，数据在类中称作属性（Property或者attribute）或者叫成员变量（Member variable）
+b)对数据的操纵，这种操纵再类中称作方法（method）
+</code></pre>
+<p>3）对象<br>对象是一种具体的概念，是类的一种具体的表现形式。比如说人是一种类，而张三、李四、王五等具体的人就是对象。</p>
+<h1 id="第九讲"><a href="#第九讲" class="headerlink" title="第九讲"></a>第九讲</h1><ol>
+<li><p>面向对象程序设计的三大基本特征：继承（inheritence）、封装（Encapsulation）、多态（Polymporphism）。</p>
+</li>
+<li><p>封装：类包含了数据与方法，将数据与方法放在一个类中就构成了封装。</p>
+</li>
+<li><p>如何定义类？</p>
+<pre><code class="java">修饰符  class 类的名字&#123;
+       //类的内容(包含了属性与方法)
+   &#125;
+</code></pre>
+</li>
+<li><p>方法：如何定义方法？</p>
+<pre><code>修饰符 返回类型  方法名称([参数一，参数二，参数三])&#123;
+   //方法体
+&#125;
+</code></pre>
+</li>
+<li><p>Main方法是整个JAVA程序的入口点，如果类的定义中没有main方法则程序无法执行。</p>
+<pre><code>class Text&#123;
+    //两个整数相加
+    public int  add(int a,int b)&#123;
+        return a + b;
+    &#125;
+    //两个整数相-
+    public int  subtract(int a,int b)&#123;
+        return a - b;
+    &#125;
+    //两个整数相乘
+    public int  multiply(int a,int b)&#123;
+        return a * b;
+    &#125;
+    //两个整数相除
+    public int  divide(int a,int b)&#123;
+        return a / b;
+    &#125;
+&#125;
+</code></pre>
+</li>
+<li><p>方法定义不能嵌套，也就是说不能在一个方法中定义另外一个方法，方法只能定义在类中。</p>
+</li>
+<li><p>关于方法的执行，首先需要定义方法，接下来就可以使用方法（调用方法），当方法调用完毕后，方法可以返回值，方法到底是否返回值是由方法的定义决定的。</p>
+</li>
+<li><p>如何生成对象？通过类来生成对象（通常使用new关键字来生成对象）。</p>
+</li>
+</ol>
+<pre><code>public class Person&#123;
+    
+&#125;
+类名    变量名    = new 类名；
+Person persion1 = new persion();
+new之后才是对象
+</code></pre>
+<ol start="9">
+<li><p>方法调用需要通过对象来完成。方法调用的形式：</p>
+<p>对象变量.方法名([参数值一，参数值二，参数值三……])</p>
+</li>
+</ol>
+<pre><code class="java">   class Text&#123;
+       //两个整数相加
+       public int  add(int a,int b)&#123;
+           return a + b;
+       &#125;
+       //两个整数相-
+       public int  subtract(int a,int b)&#123;
+           return a - b;
+       &#125;
+       //两个整数相乘
+       public int  multiply(int a,int b)&#123;
+           return a * b;
+       &#125;
+       //两个整数相除
+       public int  divide(int a,int b)&#123;
+           return a / b;
+       &#125;
+       
+       public static void main (String[] args)&#123;
+           Text text = new Text();
+           int x = 6;
+           int y = 1;
+           int a = text.add(x,y);
+           System.out.println(a);
+       &#125;
+   &#125; 
+</code></pre>
+<ol start="10">
+<li><p>关于方法的注意事项:</p>
+<ol>
+<li>在方法定义中，方法的返回类型与return后面的变量或常量类型保持一致。</li>
+<li>在方法调用时，给方法传递的参数需要与方法定义时的参数保持一致（参数个数保持一致，参数类型保持一致）。</li>
+<li>方法定义时的返回类型与接收方法返回值的变量类型保持一致。</li>
+</ol>
+</li>
+<li><pre><code>public int add (int a,int b)&#123;
+    return a + b;
+&#125;
+方法定义时的参数叫做形式参数。
+int a = text.add(1,1);
+方法调用时所赋予的具体值叫做实际参数。
+</code></pre>
+</li>
+<li><p>关键字void 表示方法不返回值</p>
+<pre><code class="java">class Text&#123;
+    //使用void。关键字表示方法不返回值
+    public void  output()&#123;
+        System.out.println(&quot;Hello world&quot;);
+    &#125;
+    public static void main (String[] args)&#123;
+        Text text = new Text();
+        text.output();
+    &#125;
+&#125;
+</code></pre>
+</li>
+<li><p>如果方法不返回值，那么声明方法的时候使用void关键字。在方法定义中，可以有两种情况实现不返回值：</p>
+<p>a) 不使用return语句。</p>
+<p>b）使用return。但return后面没有任何值或者变量，return后面只有一个分号，表示退出方法，返回到方法调用端。<code>return；</code></p>
+</li>
+</ol>
+<h1 id="第十讲"><a href="#第十讲" class="headerlink" title="第十讲"></a>第十讲</h1><ol>
+<li><p>类中的属性又叫做成员变量（member variable），属性用英文表示为property或者attribute。</p>
+</li>
+<li><p>对象（Object）又叫做实例。生成一个对象的过程又叫做实例化。</p>
+</li>
+<li><p>命名约定</p>
+<p>a) 类：首字母大写，如果一个类名有多个单词构成，那么每个单词的首字母都大写，          中间不使用任何的连接符。比如：Person类，MemberTest类。</p>
+<p>b)方法：首字母小写。如果一个方法由多个单词构成，那么第一个单词的所有字母全都小写，从第二个单词开始，每个单词的首字母大写。比如add，addThreeInt。</p>
+<p>c）属性：命名约定与方法相同。比如age，ageOfPerson。</p>
+</li>
+<li><p>属性需要定义在类中，又叫做成员变量；而定义在方法中的变量叫做局部变量。</p>
+</li>
+<li><p>如何定义属性？</p>
+<pre><code class="java">public class Persion&#123;
+    修饰符  类型  属性名称；
+&#125;
+</code></pre>
+</li>
+<li><p>如何使用属性？与方法一样，使用“.”运算符。首先需要生成类的实例，然后使用实例+“.”到方式来使用属性。</p>
+<pre><code class="哦">Person person = new person();
+person.age
+</code></pre>
+<pre><code class="java">public class Persion&#123;
+    int age = 20 ;
+    public static void main (String[] args)&#123;
+        Persion persion = new Persion();
+        System.out.println(Persion.age);
+    &#125;
+&#125;
+</code></pre>
+</li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/a20a89011c95476ff2d72c46473e6dfb.png" alt="在这里插入图片描述"></p>
+<ol start="7">
+<li><p>局部变量使用前必须要声明并赋初值；中原变量使用前必须要声明，但可以不赋初值。</p>
+</li>
+<li><p>成员变量与局部变量的联系与区别：</p>
+<p>a）没有，无论是成员变量还是局部变量，使用前都需要声明嗯或定义。</p>
+<p>b）对于局部变量来说，使用前必须要初始化；对于成员变量来说，使用前可以不初始化。如果没有初始 化成员变量就开始使用，那么每个类型的成员变量都有一个默认的初始值。</p>
+<p>​    i. byte、short、int、long类型的初始值为0</p>
+<p>​    ii. float、double类型的初始值为0.0</p>
+<p>​    iii. char类型的初始值为“\u0000”</p>
+<p>​    iiii. boolean类型的初始值为false</p>
+</li>
+<li><p>引用类型（reference type），引用类型是用在对象上的。一个对象可以被多个引用所指向，但同一时刻，每个引用只能指向唯一的一个对象。如果一个对象被多个引用所指向，那么无论哪个引用对对象的属性进行了修改，都会反应到其他的引用当中。</p>
+<pre><code class="java">class One &#123;
+    int age = 20;
+    public void change(One one)&#123;
+        one.age = 30;
+    &#125;
+    public static void main (String[] args)&#123;
+        One one = new One();
+        int age = one.age;
+        System.out.println(age);
+        one.change(one);
+        int age2 = one.age;
+        System.out.println(age2);
+    &#125;
+&#125;
+</code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/8f8d6de84058f2afe2dddd51b6ce02d9.png"></p>
+</li>
+</ol>
+<h1 id="第十一讲"><a href="#第十一讲" class="headerlink" title="第十一讲"></a>第十一讲</h1><ol>
+<li><p>如果一个类包含了属性与方法，那么该类的每个对象都具有自己的属性，但无论一个类有多少对象，这些对象共享同一个方法。</p>
+</li>
+<li><p>关于方法参数传递的总结：对于JAVA中的方法参数传递，无论传递的是原生数据类型还是引用类型，统一是传值。</p>
+<pre><code class="Java">public class ParamText&#123;
+    public static void main (String[] args)&#123;
+        Person person = new Person();
+        person.change(person);
+        int age = persion.age;
+        System.out.println(age);
+        System.out.println(&quot;-------&quot;);
+        int i = 10;
+        person.change1(i);
+        System.out.println(i);
+    &#125;
+&#125;
+class Person&#123;
+    int age = 20 ;
+    public void change(Person person)&#123;
+        person.age = 30 ;
+    &#125;
+    public void change1(int age)&#123;
+        age = 40;
+    &#125;
+&#125;
+</code></pre>
+<ol start="3">
+<li><p>什么类型的引用就能指下什么类型的对象，比如People类型的引用就能指向People类型的对象，但不能指向student类型的对象。比如:</p>
+<p>People people &#x3D; new People();&#x2F;&#x2F;正确</p>
+<p>People people &#x3D; new Student();&#x2F;&#x2F;错误</p>
+</li>
+</ol>
+</li>
+<li><p>构造方法（Constructor）：构造方法用于完成对象属性的初始化工作。构造方法的特点：</p>
+<ol>
+<li>构造方法的名字必须与类名完全一致（包括大小写）。</li>
+<li>构造方法没有返回值，连void也不能出现。</li>
+<li>如果在定义一个类的时候，没有喂类声明构造方法。那么JAVA编译器会自动为类添加一个没有参数且方法体为空的构造方法（默认的构造方法）。</li>
+<li>如果在定义一个类的时候为类声明了构造方法，那么JAVA编译器就不会再被类添加构造方法了。</li>
+<li>不能显示调用类的构造方法，构造方法通常是通过new关键字隐式调用。</li>
+</ol>
+</li>
+<li><p>New关键字在生成对象时完成了三件事情：</p>
+<ol>
+<li>为对象开辟内存空间</li>
+<li>调用类的构造方法</li>
+<li>将生成的对象地址返回（返回给引用）</li>
+</ol>
+</li>
+<li><p>默认的构造方法：构造方法没有参数，且方法体为空。</p>
+</li>
+<li><p>使用new来生成对象的时候，后面的小括号（）表示构造方法的参数列表，如果构造方法不接受参数，那么小括号中的内容为空；如果构造方法接收参数，那么小括号中的实际参数就要与构造方法定义中的形式参数保持一致（参数的数量一致、参数的类型一致、按照顺序逐一的赋值）。</p>
+</li>
+</ol>
+<h1 id="第十二讲"><a href="#第十二讲" class="headerlink" title="第十二讲"></a>第十二讲</h1><ol>
+<li><p>注释：注释是给人看的，不是给计算机看的。JAVA中共有三种类型的注释：</p>
+<ol>
+<li>单行注释：以&#x2F;&#x2F;开头，&#x2F;&#x2F;后面的所有内容均被当作注释做注释处理。</li>
+<li>多行注释：以&#x2F;<em>开头，以</em>&#x2F;结束，中间的所有内容均被当做注释处理，多行注释来源于c&#x2F;c++。关于多行注释，需要注意的是，多行注释不能嵌套。</li>
+<li>另一种多行注释用于产生JAVA doc帮助文档。</li>
+</ol>
+</li>
+<li><p>强制类型转换</p>
+<p>float f &#x3D; 1.2f;</p>
+<p>float f &#x3D; (float)1.2;</p>
+<pre><code class="java">public class FlaotText&#123;
+    public static void main(String[] args)&#123;
+        flaot f = 1.2f;
+        System.out.println(f);
+    &#125;
+&#125;
+</code></pre>
+</li>
+<li><p>轻量级文本编译器：vi,vim,gvim,UItraEdit,Editplus</p>
+</li>
+<li><p>类是一种抽象的概念，对象是类的一种具体表示形式，是具体的概念。先有类，然后由类来生成对象，对象又叫做实例。</p>
+</li>
+<li><p>类有两大部分构成：属性以及方法，属性一般用名词来表示，方法一般用动词来表示。  </p>
+</li>
+<li><p>如果有一个JAVA源文件中定义了多个类，那么这些类最多只能有一个类是pub换句话说定义的多个类可以都不是public的。</p>
+</li>
+<li><p>在JAVA中进行方法的参数传递时，无论传递的是原生数据类型还是引用类型，参数传递方式统一是传值，JAVA中没有传引用的概念。</p>
+<p><strong>第十二讲到第十六讲都为复习！！！</strong></p>
+</li>
+</ol>
+<h1 id="第十七讲"><a href="#第十七讲" class="headerlink" title="第十七讲"></a>第十七讲</h1><ol>
+<li><p>方法重载（Overload）：表示两个或多个方法名字相同，但方法参数不同。方法参数不同有两层含义：1. 参数个数不同。2. 参数类型不同。注意：方法的返回值对重载没有任何影响。</p>
+<pre><code class="java">public class Teat&#123;
+    public int add (int a,int b)&#123;
+        return a + b;
+    &#125;
+    
+    public int add (int a,int b,int c)&#123;
+        return a + b + c;
+    &#125;
+    
+    public static void main (String[] args)&#123;
+        Teat test = new Teat();
+        int result = test.add(1+2);
+        int result2 = test.add(1+2+3);
+        System.out.println(result);
+        System.out.println(result2);
+    &#125;
+&#125;
+</code></pre>
+</li>
+<li><p>构造方法重载：只需要看参数即可。如果想在一个构造方法中调用另外一个构造方法，那么可以使用this()的方式调用，this()括号中的参数表示目标构造方法的参数。this()必须要作为构造方法的第一条语句，换句话说，this()之前不能有任何可执行的代码。</p>
+<pre><code class="java">public class One&#123;
+    public One()&#123;
+        Systerm.out.println(&quot;test&quot;);
+    &#125;
+    public One(int i)&#123;
+        System.out.println(++i);
+    &#125;
+    public static void mian (String[] args)&#123;
+        One co = new One();
+    &#125;
+&#125;
+</code></pre>
+</li>
+<li><p>继承（inheritance）：Java是单继承的，意味着一个类只能从另一个类继承（被继承的类叫做父类【基类，base class】,继承的类叫做子类），Java中的继承使用extends关键字。</p>
+<pre><code class="java">public class Child extents Parent&#123;
+    public Child()&#123;
+        System.out.println(&quot;child&quot;);
+    &#125;
+    public static void main (String[] args)&#123;
+        Child child = new Child();
+    &#125; 
+&#125;
+
+class Parent&#123;
+    public Parent()&#123;
+        System.out.println(&quot;parent&quot;);
+    &#125;
+&#125;
+</code></pre>
+</li>
+<li><p>当生成子类对象时，JAVA默认首先调用父类的不带参数的构造方法。然后执行该构造方法生成父类的对象，接下来再去调用子类的构造方法，生成子类的对象。【要想生成子类的对象，首先需要生成父类的对象，没有父类对象就没有子类对象，比如说没有父亲就没有孩子。】</p>
+</li>
+</ol>
+<pre><code class="java">public class Child extents Parent&#123;
+    public Child()&#123;
+        super(1);//调用父类特定的构造方法
+        System.out.println(&quot;child&quot;);
+    &#125;
+    public static void main (String[] args)&#123;
+        Child child = new Child();
+    &#125; 
+&#125;
+
+class Parent&#123;
+    public Parent(int i)&#123;
+        System.out.println(&quot;parent&quot;);
+    &#125;
+&#125;
+</code></pre>
+<ol start="5">
+<li><p>super关键字：super表示对父类对象的引用。</p>
+</li>
+<li><p>如果子类使用super（）显示调用父类的某个构造方法，那么在执行的时候就会寻找与super（）所对应的构造方法而不会再去寻找父类的不带参数的构造方法。与this一样，super也必须要作为构造方法的第一条执行语句。前面不能有其他可执行的语句。</p>
+</li>
+<li><p>关于继承有以下几点：</p>
+<ol>
+<li>父类有的，子类也有。</li>
+<li>父类没有的，子类可以增加。</li>
+<li>父类有的，子类可以改变。</li>
+</ol>
+</li>
+<li><p>关于继承的注意事项</p>
+<ol>
+<li>构造方法不能被继承。</li>
+<li>方法和属性可以被继承。</li>
+<li>子类的构造方法隐式的调用父类的不带参数的构造方法。</li>
+<li>当弗雷没有不带参数的构造方法时，子类需要使用super来显示的调用父类的构造方法，super指的是对父类的引用。</li>
+<li>super关键字必须是构造方法中的第一行语句。</li>
+</ol>
+</li>
+</ol>
+<h1 id="第十八讲"><a href="#第十八讲" class="headerlink" title="第十八讲"></a>第十八讲</h1><ol>
+<li><p>方法重写（Override）又叫做覆写：子类与父类的方法返回类型一样，方法名称一样，参数一样，这样我们说此类与父类的方法构成了重写关系。</p>
+<pre><code class="java">package lianxi;
+
+public class Test2 &#123;
+    public static void main(String[] args)&#123;
+        Dog dog = new Dog();
+        dog.run();
+    &#125;
+&#125;
+class Animal &#123;
+    public void run()&#123;
+        System.out.println(&quot;animal is runing&quot;);
+    &#125;
+&#125;
+class Dog extends Animal&#123;
+&#125;
+</code></pre>
+</li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/8c495e753639097f8771eaa01da57421.png" alt="在这里插入图片描述"></p>
+<pre><code class="java">package lianxi;
+public class Test2 &#123;
+    public static void main(String[] args)&#123;
+        Dog dog = new Dog();
+        dog.run();
+    &#125;
+&#125;
+class Animal &#123;
+    public void run()&#123;
+        System.out.println(&quot;animal is runing&quot;);
+    &#125;
+&#125;
+class Dog extends Animal&#123;
+    public void run()&#123;
+        System.out.println(&quot;dog is running&quot;);
+    &#125;
+&#125;
+</code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/78d5a7d72e9e00011da4858208a45964.png" alt="在这里插入图片描述"></p>
+<ol start="2">
+<li>方法重写与方法重载之间的关系：重载发生在同一个类内部的两个或多个方法。重写发生在父类与子类之间。</li>
+</ol>
+<pre><code class="java">package lianxi;
+public class Test2 &#123;
+    public static void main(String[] args)&#123;
+        Dog dog = new Dog();
+        dog.run(1);
+    &#125;
+&#125;
+class Animal &#123;
+    public void run()&#123;
+        System.out.println(&quot;animal is runing&quot;);
+    &#125;
+&#125;
+class Dog extends Animal&#123;
+    public void run(int i)&#123;
+        super.run();//调用父类的代码
+        System.out.println(&quot;dog is running&quot;);
+    &#125;
+&#125;
+</code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/b1375f7461a17e9830e21865d778dae9.png" alt="在这里插入图片描述"><br>3. 当两个方法形成重写关系时，可以在子类方法中通过super.run()形式调用父类的run()方法，其中super.run（）形式调用父类的run（）方法，其中super.run()不必放在第一行语句，因此此时父类对象已经构造完毕，先调用父类的run()方法是根据程序的逻辑决定的。</p>
+<pre><code class="java">package lianxi;
+public class Test2 &#123;
+    public static void main(String[] args)&#123;
+        Dog dog = new Dog();
+        dog.run(1);
+    &#125;
+&#125;
+class Animal &#123;
+    public void run()&#123;
+        System.out.println(&quot;animal is runing&quot;);
+    &#125;
+&#125;
+class Dog extends Animal&#123;
+    public void run(int i)&#123;
+        System.out.println(&quot;dog is running&quot;);
+        super.run();//调用父类的代码
+    &#125;
+&#125;
+</code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/2fdf05257e0394199ed14e5e53441fd4.png" alt="在这里插入图片描述"><br>4. 在定义一个类的时候，如果没有显试指定该类的父类，那么该类就会继承于java.lang.Object类（JDK提供的一个类，Object类是JAVA中所有类的直接或间接的父类）。</p>
+<pre><code class="java">package lianxi;
+public class Test2 &#123;
+    public static void main(String[] args)&#123;
+        Son son = new Son();
+    &#125;
+&#125;
+class Grandpa&#123;
+    public Grandpa()&#123;
+        System.out.println(&quot;Grandpa&quot;);
+    &#125;
+&#125;
+class Father extends Grandpa&#123;
+    public Father()&#123;
+        System.out.println(&quot;father&quot;);
+    &#125;
+&#125;
+class Son extends  Father&#123;
+    public Son()&#123;
+        System.out.println(&quot;son&quot;);
+    &#125;
+&#125;
+</code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/a9ecc90105adf78cfbae83670a321ad2.png" alt="在这里插入图片描述"><br>5. 多态（Polymorphism）:我们说子类就是父类（玫瑰花是花，男人是人），因此多态的意思就是：父类型的引用可以指向子类对象。</p>
+<pre><code class="java">package lianxi;
+public class Test2 &#123;
+    public static void main(String[] args)&#123;
+        Flower rose = new Rose();//多态
+        rose.sing();
+    &#125;
+&#125;
+class Flower&#123;
+    public void sing()&#123;
+        System.out.println(&quot;it is singing&quot;);
+    &#125;
+&#125;
+class Rose extends Flower&#123;
+
+&#125;
+</code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/68b9e1fcd3d88e7dfe2c4ef98d1718db.png" alt="在这里插入图片描述"></p>
+<h1 id="第十九讲"><a href="#第十九讲" class="headerlink" title="第十九讲"></a>第十九讲</h1><ol>
+<li><p>多态：父类型的引用可以指向子类型的对象。</p>
+<pre><code class="java">package lianxi;
+public class Test2 &#123;
+    public static void main(String[] args)&#123;
+        Parent child = new Child();
+        child.sing();
+    &#125;
+&#125;
+class Parent&#123;
+    public void sing()&#123;
+        System.out.println(&quot;parent is singing&quot;);
+    &#125;
+&#125;
+class Child extends Parent&#123;
+    public void sing()&#123;
+        System.out.println(&quot;child is singing&quot;);
+    &#125;
+&#125;
+</code></pre>
+</li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/5249c825efda6ea8785e9c64ed44d195.png" alt="在这里插入图片描述"><br>2. Parent child &#x3D; new Child();当使用多态方式调用方法时，首先检查父类是否有sing()方法，如果没有编译错误；如果有，再去调用子类的sing()方法。</p>
+<pre><code class="java">package lianxi;
+public class Test2 &#123;
+    public static void main(String[] args)&#123;
+        Animal a = new Dog();
+        Dog dog =  (Dog)a;
+        dog.sing();
+    &#125;
+&#125;
+class Animal &#123;
+    public void sing ()&#123;
+        System.out.println(&quot;animal is singing&quot;);
+    &#125;
+&#125;
+class Dog extends Animal &#123;
+    public void sing()&#123;
+        System.out.println(&quot;Dog is singing&quot;);
+    &#125;
+&#125;
+</code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/cef768f4cc2989d6ea1ef09f544b5ecd.png" alt="在这里插入图片描述"></p>
+<h1 id="第二十讲"><a href="#第二十讲" class="headerlink" title="第二十讲"></a>第二十讲</h1><ol>
+<li><pre><code class="java">package lianxi;
+public class Test2 &#123;
+    public static void main(String[] args)&#123;
+        Animal animal = new Dog();
+        Animal animal2 = new Animal();
+        animal2 = animal;
+        animal2.sing();
+    &#125;
+&#125;
+class Animal &#123;
+    public void sing ()&#123;
+        System.out.println(&quot;animal is singing&quot;);
+    &#125;
+&#125;
+class Dog extends Animal &#123;
+    public void sing()&#123;
+        System.out.println(&quot;Dog is singing&quot;);
+    &#125;
+&#125;
+</code></pre>
+</li>
+</ol>
+<p> <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/b565c18eb20d66b8cb7c3143ae316d61.png" alt="在这里插入图片描述"></p>
+<ol start="2">
+<li><p>一共有两种类型的强制类型转换：</p>
+<ol>
+<li><p>向上的类型转换（upcast）：比如说将dog类型转换为Animal类型，即将子类型转换为父类型。对于向上类型转换，不需要显示指定。</p>
+<pre><code class="java">package lianxi;
+public class Test2 &#123;
+    public static void main(String[] args)&#123;
+        //向上类型转换
+        Dog dog = new Dog();
+        Animal animal = dog;
+        animal.sing();
+    &#125;
+&#125;
+class Animal &#123;
+    public void sing ()&#123;
+        System.out.println(&quot;animal is singing&quot;);
+    &#125;
+&#125;
+class Dog extends Animal &#123;
+    public void sing()&#123;
+        System.out.println(&quot;Dog is singing&quot;);
+    &#125;
+&#125;
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/f1e0859993c496201dea07b53f6cf0a9.png" alt="在这里插入图片描述"></p>
+<ol start="2">
+<li><p>向下的类型转换（downcast）：比如将Animal类型转换为dog类型。即将父类型转换为子类型。对于向下类型转换，必须要显示指定（必须要使用强制类型转换）。</p>
+<pre><code class="java">package lianxi;
+public class Test2 &#123;
+    public static void main(String[] args)&#123;
+        //向下类型转换
+        Animal a = new Dog();
+        Dog dog = (Dog)a;
+        dog.sing();
+    &#125;
+&#125;
+class Animal &#123;
+    public void sing ()&#123;
+        System.out.println(&quot;animal is singing&quot;);
+    &#125;
+&#125;
+class Dog extends Animal &#123;
+    public void sing()&#123;
+        System.out.println(&quot;Dog is singing&quot;);
+    &#125;
+&#125;
+</code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/ef73b0a621ee3f1ec6fdd9f972c41d58.png" alt="在这里插入图片描述"></p>
+</li>
+</ol>
+<h1 id="第二十一讲"><a href="#第二十一讲" class="headerlink" title="第二十一讲"></a>第二十一讲</h1><ol>
+<li>抽象类（abstract class ）:使用abstract关键字所修饰的累叫做抽象类。抽象类无法实例化，也就是说，不能new出来一个抽象类的对象（实例）。<br><strong>错误演示</strong></li>
+</ol>
+<pre><code>package exercise;
+
+public class exercise001 &#123;
+    public static void main (String[] args)&#123;
+        T t = new T();
+    &#125;
+&#125;
+//使用abstract关键字所修饰的累叫做抽象类。
+abstract class T&#123;
+
+&#125;
+</code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/0ba2a463cae44625beca1b9afafa9b63.png" alt="在这里插入图片描述"><br>2. 抽象方法（abstract method）:使用abstract关键字所修饰的方法叫做抽象方法。<em><strong>抽象方法需要定义在抽象类中。</strong></em> 相对于抽象方法，之前所定义的方法叫做具体方法（有声明，有实现）</p>
+<pre><code class="java">package exercise;
+
+public class exercise001 &#123;
+    public static void main (String[] args)&#123;
+        
+    &#125;
+&#125;
+//使用abstract关键字所修饰的累叫做抽象类。
+abstract class T&#123;
+    public abstract void method();
+&#125;
+</code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/013d0f601df69680f4398a812da479d1.png" alt="在这里插入图片描述"><br>3. 如果有一个类包含了抽象方法，那么这个类一定是个抽象类。<br>4. 如果某个类是抽象类，那么该类可以包含具体方法（有声明，有实现）。</p>
+<pre><code class="java">package exercise;
+
+public class exercise001 &#123;
+    public static void main (String[] args)&#123;
+    &#125;
+&#125;
+//使用abstract关键字所修饰的累叫做抽象类。
+abstract class T&#123;
+    public abstract void method();
+    public void test()&#123;
+        System.out.println(&quot;test&quot;);
+    &#125;
+&#125;
+</code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/cb876ae8efe405321058cffed5c49c10.png" alt="在这里插入图片描述"><br>5. 如果一个类中包含了抽象方法，那么这个类一定要声明成abstract class ，也就是说，该类一定是抽象类；反之，如果某个类是抽象类，那么该类既可以包含抽象方法，也可以包含具体方法。<br>6. 无论何种情况，只要一个类是抽象类，那么这个类就无法实例化。<br>7. 在子类继承父类（父类是一个抽象类）的情况下，那么该子类必须要实现父类中所定义的所有抽象方法；否则，该子类需要声明一个<strong>abstract class</strong> 。<br><em><strong>错误示范</strong></em></p>
+<pre><code class="java">package exercise;
+
+public class exercise001 &#123;
+    public static void main (String[] args)&#123;
+        R r = new R();
+    &#125;
+&#125;
+//使用abstract关键字所修饰的累叫做抽象类。
+abstract class T&#123;
+    public abstract void method();
+    public void test()&#123;
+        System.out.println(&quot;test&quot;);
+    &#125;
+&#125;
+class R extends T&#123;
+
+&#125;
+</code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/a93c911ae8c2022d643d78864c959259.png" alt="在这里插入图片描述"><br><em><strong>正确示范</strong></em></p>
+<pre><code class="java">package exercise;
+public class exercise001 &#123;
+    public static void main (String[] args)&#123;
+        R r = new R();
+    &#125;
+&#125;
+//使用abstract关键字所修饰的累叫做抽象类。
+abstract class T&#123;
+    public abstract void method();
+    public void test()&#123;
+        System.out.println(&quot;test&quot;);
+    &#125;
+&#125;
+class R extends T&#123;
+    public void method()&#123;
+        System.out.println(&quot;test&quot;);
+    &#125;
+&#125;
+</code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/747f34187aa0b2a9bcc909411888b29e.png" alt="在这里插入图片描述"></p>
+<pre><code class="java">package exercise;
+public class exercise001 &#123;
+    public static void main (String[] args)&#123;
+        //R r = new R();
+    &#125;
+&#125;
+//使用abstract关键字所修饰的累叫做抽象类。
+abstract class T&#123;
+    public abstract void method();
+    public void test()&#123;
+        System.out.println(&quot;test&quot;);
+    &#125;
+&#125;
+abstract class R extends T&#123;
+    
+&#125;
+</code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/b4f65a0359ffeb96f084ce1935e15436.png" alt="在这里插入图片描述"></p>
+<pre><code class="java">package exercise;
+
+public class exercise002 &#123;
+    public static void main(String[] args)&#123;
+        Shape shape = new Triange(10,6);
+        int area = shape.computeArea();
+        System.out.println(area);
+        shape = new Rectangle(10,10);
+        int areas = shape.computeArea();
+        System.out.println(areas);
+    &#125;
+&#125;
+abstract class Shape&#123;
+    public abstract int computeArea();//计算形状面积
+&#125;
+class Triange extends Shape&#123;
+    int width;
+    int heights;
+    public Triange(int width,int heights)&#123;
+        this.width = width;//自己获取自己
+        this.heights= heights;
+    &#125;
+    public int computeArea()&#123;
+        return width * heights /2;
+    &#125;
+&#125;
+class Rectangle extends Shape&#123;
+    int width;
+    int heights;
+    public Rectangle(int width,int heights)&#123;
+        this.heights = heights;
+        this.width = width;
+    &#125;
+    public int computeArea()&#123;
+        return width * heights;
+    &#125;
+&#125;
+</code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/ae5233b528794ccbd8c73f25a68295cc.png" alt="在这里插入图片描述"></p>
+<h1 id="第二十二讲"><a href="#第二十二讲" class="headerlink" title="第二十二讲"></a>第二十二讲</h1><ol>
+<li>接口（interface）：接口的地位等同于class, <strong>接口中所有方法都是抽象方法。</strong> 在声明接口中的方法时，可以使用abstract关键字，也可以不使用。通常情况下，都会省略掉abstract关键字。（有声明，无实现）</li>
+</ol>
+<pre><code class="java">package exercise;
+
+public interface exercise003 &#123;
+    public void output();//抽象方法
+    public static void main(String[] args)&#123;
+    &#125;
+&#125;
+</code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/5118ed222df0b9bbb85623459b598e39.png" alt="在这里插入图片描述"><br>2. 可以将接口看作是特殊的抽象类（抽象类中可以有具体方法，也可以有抽象方法，而接口中只能有抽象方法，不能有具体方法）。<br>3. 类可以实现接口，实现使用关键字implements表示，代表了某个类实现了某个接口。</p>
+<pre><code class="java">package exercise;
+public class exercise003 &#123;
+    public static void main (String[] args)&#123;
+        Myclass myclass = new Myclass();
+        myclass.output();
+    &#125;
+&#125;
+interface MyInterface&#123;
+    public void output();
+&#125;
+class Myclass implements MyInterface&#123;
+     public void output()&#123;
+         System.out.println(&quot;output&quot;);
+     &#125;
+&#125;
+</code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/23442f953476d0038f76d743e853fdd6.png" alt="在这里插入图片描述"><br>4. 一个类实现了某个接口，那么该类必须要实现接口声明的所有方法。如果该类是个抽象类，那么就无需实现接口中的方法了。<br>5. Java是单继承的，也就是说某个类只能有唯一一个父类；一个类可以实现多个接口，多个接口之间使用逗号分隔。</p>
+<pre><code class="java">package exercise;
+
+public class exercise003 &#123;
+    public static void main (String[] args)&#123;
+        Myclass myclass = new Myclass();
+        myclass.output();
+        myclass.output2();
+    &#125;
+&#125;
+interface MyInterface&#123;
+    public void output();
+&#125;
+interface MyInterface2&#123;
+    public void output2();
+&#125;
+class Myclass implements MyInterface,MyInterface2&#123;
+     public void output()&#123;
+         System.out.println(&quot;output&quot;);
+     &#125;
+
+    @Override
+    public void output2() &#123;
+        System.out.println(&quot;output2&quot;);
+    &#125;
+&#125;
+</code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/5d3bc0fa9bcd9250798a0d26421fda2d.png" alt="在这里插入图片描述"></p>
+<pre><code class="java">package exercise;
+
+public class exercise003 &#123;
+    public static void main (String[] args)&#123;
+        Myclass myclass = new Myclass();
+        myclass.output();
+        myclass.output2();
+        myclass.output3();
+    &#125;
+&#125;
+interface MyInterface&#123;
+    public void output();
+&#125;
+interface MyInterface2&#123;
+    public void output2();
+&#125;
+class Myparent&#123;
+    public void output3()&#123;
+        System.out.println(&quot;output3&quot;);
+    &#125;
+&#125;
+class Myclass extends Myparent implements MyInterface,MyInterface2&#123;
+     public void output()&#123;
+         System.out.println(&quot;output&quot;);
+     &#125;
+
+    @Override
+    public void output2() &#123;
+        System.out.println(&quot;output2&quot;);
+    &#125;
+&#125;
+</code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/804ae2b6c3abd1be6dcf288f15d2515d.png" alt="在这里插入图片描述"><br>6. 多态：所谓多态，就是父类型的引用可以指向子类型的对象，或者接口类型的引用可以指向实现该接口的类的实例。关于接口与实现接口的类之间的强制类型转换方式与父类和子类之间的强制类型转换方式完全一样。</p>
+<pre><code class="java">package exercise;
+
+public class exercise004 &#123;
+    public static void mian (String[] args)&#123;
+        AA bb = new BB();//多态
+        bb.output();
+    &#125;
+&#125;
+interface  AA&#123;
+    public void output();
+&#125;
+class BB implements AA&#123;
+    public void output()&#123;
+        System.out.println(&quot;BB&quot;);
+    &#125;
+&#125;
+</code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/0583f6c352ca418a07059f12b099aec4.png" alt="在这里插入图片描述"><br>7. Static 关键字：可以用于修饰属性，也可以用于修饰方法，还可以用于修饰类。<br>8. static 修饰属性：无论一个类生成了多少个对象，所有这些对象共同使用唯一一份静态成员变量；一个对象对该静态成员变量进行了修改，其他对象的该静态成员变量的值也随之发生变化。如果一个成员变量是static的，那么我们可以通过 <strong>类名.成员变量名</strong> 的方式来使用它（Java推荐我们使用这种方法）。</p>
+<pre><code class="java">package exercise;
+
+public class exercise005 &#123;
+    public static void main (String[] args)&#123;
+        MyStatic myStatic = new MyStatic();
+        MyStatic myStatic1 = new MyStatic();
+        myStatic.a = 10;
+        System.out.println(myStatic1.a);
+    &#125;
+&#125;
+class MyStatic&#123;
+    static int a;
+&#125;
+</code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/4f8a2631b9c7f2efa9b6d998e77f460f.png" alt="在这里插入图片描述"></p>
+<pre><code class="java">package exercise;
+public class exercise005 &#123;
+    public static void main (String[] args)&#123;
+        MyStatic myStatic = new MyStatic();
+        myStatic.a = 10;
+        System.out.println(myStatic.a);
+    &#125;
+&#125;
+class MyStatic&#123;
+    static int a;
+&#125;
+</code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/88e715056d0a8694d3e63f47a992f031.png" alt="在这里插入图片描述"></p>
+<h1 id="第二十三讲"><a href="#第二十三讲" class="headerlink" title="第二十三讲"></a>第二十三讲</h1><ol>
+<li>static 修饰方法：static 修饰的方法叫做静态方法。对于静态方法来说，可以使用类名.方法名的方式来访问。<br><em><strong>正常</strong></em></li>
+</ol>
+<pre><code class="java">package exercise;
+public class exercise006 &#123;
+    public static void main (String[] args)&#123;
+        MyStatic2 test =new MyStatic2();
+        test.out();
+    &#125;
+&#125;
+class MyStatic2&#123;
+    public void out()&#123;
+        System.out.println(&quot;out&quot;);
+    &#125;
+&#125;
+</code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/ba1a7426af97fe8c6a4b40070d2b0b0f.png" alt="在这里插入图片描述"><br><em><strong>修正后的</strong></em></p>
+<pre><code class="java">package exercise;
+public class exercise006 &#123;
+    public static void main (String[] args)&#123;
+        MyStatic2.out();
+    &#125;
+&#125;
+class MyStatic2&#123;
+    public static void out()&#123;
+        System.out.println(&quot;out&quot;);
+    &#125;
+&#125;
+</code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/2068582e7d2b630b9576bac0f5da187e.png" alt="在这里插入图片描述"><br><em><strong>对比</strong></em></p>
+<pre><code class="java">package exercise;
+public class exercise007 &#123;
+    public static void main (String[] args)&#123;
+        N n = new N();
+        n.output();
+    &#125;
+&#125;
+class M&#123;
+    public static void output()&#123;
+        System.out.println(&quot;m&quot;);
+    &#125;
+&#125;
+class N extends M&#123;
+    public static void output()&#123;
+        System.out.println(&quot;N&quot;);
+    &#125;
+&#125;
+</code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/57725ce7ecc4fe5f12343e88e2327add.png" alt="在这里插入图片描述"></p>
+<pre><code class="java">package exercise;
+public class exercise007 &#123;
+    public static void main (String[] args)&#123;
+        M m = new N();
+        m.output();
+    &#125;
+&#125;
+class M&#123;
+    public static void output()&#123;
+        System.out.println(&quot;m&quot;);
+    &#125;
+&#125;
+class N extends M&#123;
+    public static void output()&#123;
+        System.out.println(&quot;N&quot;);
+    &#125;
+&#125;
+</code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/e25ecd246773734c82f3956a7be19256.png" alt="在这里插入图片描述"><br> <strong>2. 静态方法只能继承，不能重写（Override）。</strong><br> 3. final关键字：final可以修饰属性、方法、类。<br> 4. final修饰类：当一个类被final所修饰时，表示该类是一个终态类，即不能被继承。</p>
+<pre><code class="java">package exercise;
+public class exercise008 &#123;
+    public static void main(String[] args)&#123;
+        F f = new F();
+    &#125;
+&#125;
+final class E&#123;//表示该类不能被继承
+&#125;
+class F extends E&#123;
+&#125;
+</code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/9d81b517f6cf9e69990d50d91e5cc85e.png" alt="在这里插入图片描述"><br>5. final修饰方法：当一个方法被final所修饰时，表示该方法是一个终态方法，即不能被重写（Override） 。<br><em><strong>错误示例</strong></em></p>
+<pre><code class="java">package exercise;
+public class exercise008 &#123;
+    public static void main(String[] args)&#123;
+        H h =new H();
+        h.out();
+    &#125;
+&#125;
+class G&#123;
+    public final void out()&#123;
+        System.out.println(&quot;G&quot;);
+    &#125;
+&#125;
+class H extends G&#123; 
+    public void out()&#123;
+        System.out.println(&quot;H&quot;);
+    &#125;
+&#125;
+</code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/ea71f63ac4d55be2177316fdc52d1f2c.png" alt="在这里插入图片描述"><br>6. final 修饰属性：当一个属性被final所修饰时，表示该属性不能被改写。<br><em><strong>错误示例</strong></em></p>
+<pre><code class="java">package exercise;
+public class exercise008 &#123;
+    public static void main(String[] args)&#123;
+        People people = new People();
+        people.age = 20;
+    &#125;
+&#125;
+class People&#123;
+    final int age =10;
+&#125;
+</code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/b75c0bc5fb0e868edf57233466dfa1d5.png" alt="在这里插入图片描述"></p>
+<pre><code class="java">package exercise;
+public class exercise008 &#123;
+    public static void main(String[] args)&#123;
+        People people = new People();
+        people.address.name = &quot;shanghai&quot;;
+    &#125;
+&#125;
+class People&#123;
+    final Address address = new Address();
+&#125;
+class Address&#123;
+    String name = &quot;dalian&quot;;
+&#125;
+</code></pre>
+<p><em><strong>可以执行</strong></em><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/128130f4bd43c029122fdf104133f055.png" alt="在这里插入图片描述"><br>7. 当final修饰一个原生数据类型时，表示该原生数据类型的值不能发生变化（比如说不能从10变成20）；如果final修饰一个引用类型时，表示该引用类型不能在指向其他对象了；但该引用所指向的对象的内容是可以发生变化的。</p>
+<h1 id="第二十四讲"><a href="#第二十四讲" class="headerlink" title="第二十四讲"></a>第二十四讲</h1><ol>
+<li>对于final类型成员变量，一般来说有两种赋初值方式：<ol>
+<li>在声明final类型的成员变量时就赋上初值。</li>
+</ol>
+</li>
+</ol>
+<pre><code class="java">package exercise;
+public class exercise009 &#123;
+    final int a = 0;
+&#125;
+</code></pre>
+<pre><code>2. 在声明final类型的成员变量时不赋初值，但在类的所有构造方法中都为其赋上初值。
+</code></pre>
+<pre><code class="java">package exercise;
+public class exercise009 &#123;
+    final int a;
+    public exercise009()&#123;
+        a = 0;
+    &#125;
+    public exercise009(int a)&#123;
+        this.a = a;
+    &#125;
+&#125;
+</code></pre>
+<ol start="2">
+<li>static 代码块：静态代码块。静态代码块的作用也是完成一些初始化工作。首先执行静态代码块，然后执行构造方法。静态代码块在类被加载的时候执行，而构造方法是在生成对象的时候执行；要想调用某个类来生成对象，首先需要将类加载到Java虚拟机上（JVM），然后由jvm加载这个类来生成对象。</li>
+</ol>
+<pre><code class="java">package exercise;
+public class exercise009 &#123;
+    public static void main (String[] args)&#123;
+        P p = new P();
+        P p2 = new P();
+    &#125;
+&#125;
+class P&#123;
+    static &#123;
+        System.out.println(&quot;static block&quot;);
+    &#125;
+    public P()&#123;
+        System.out.println(&quot;P out&quot;);
+    &#125;
+&#125;
+</code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/5e41b2ad74c06493be930c575e7108aa.png" alt="在这里插入图片描述"></p>
+<pre><code class="java">package exercise;
+public class exercise009 &#123;
+    public static void main (String[] args)&#123;
+        new S();
+    &#125;
+&#125;
+class P&#123;
+    static &#123;
+        System.out.println(&quot;P static block&quot;);
+    &#125;
+    public P()&#123;
+        System.out.println(&quot;P out&quot;);
+    &#125;
+&#125;
+class Q extends P&#123;
+    static &#123;
+        System.out.println(&quot;Q static&quot;);
+    &#125;
+    public Q()&#123;
+        System.out.println(&quot;Q out&quot;);
+    &#125;
+&#125;
+class S extends Q&#123;
+    static &#123;
+        System.out.println(&quot;S static&quot;);
+    &#125;
+    public S()&#123;
+        System.out.println(&quot;S out&quot;);
+    &#125;
+&#125;
+</code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/1ef8d1a7221639f784db5255f4ba35ff.png" alt="在这里插入图片描述"><br>3. 类的静态代码块只会执行一次，是在类被加载的时候执行的，因为每个类只会被加载一次，所有静态代码块也只会被执行一次；而构造方法则不然，每次生成一个对象的时候都会调用类的构造方法，所以new一次就会调用构造方法一次。<br>4. 如果继承体系中既有构造方法，又有静态代码块，那么首先执行最顶层的类的静态代码块，一直执行到最底层类的静态代码块。<strong>注意：静态代码块只会执行一次</strong> 。<br>5. 不能在静态方法中访问非静态成员变量；可以在静态方法中访问静态的成员变量。可以在非静态方法中访问静态的成员变量。</p>
+<pre><code class="java">package exercise;
+public class exercise010 &#123;
+    public static void main (String[] args)&#123;
+        W.change();
+    &#125;
+&#125;
+class W &#123;
+    static int a = 10;
+    public static void change()&#123;
+        a++;
+    &#125;
+&#125;
+</code></pre>
+<ol start="6">
+<li><p><strong>总结：静态的只能访问静态的；非静态的可以访问一切</strong></p>
+</li>
+<li><p><strong>不能在静态方法中使用this关键字。</strong></p>
+</li>
+<li><p>多态：父类型的引用可以指向子类型的对象。</p>
+</li>
+<li><p>Parent child &#x3D; new Child();当使用多态方式调用方法时，首先检查父类是否有sing()方法，如果没有编译错误；如果有，再去调用子类的sing()方法。</p>
+</li>
+<li><p>一共有两种类型的强制类型转换：</p>
+<ol>
+<li>向上的类型转换（upcast）：比如说将dog类型转换为Animal类型，即将子类型转换为父类型。对于向上类型转换，不需要显示指定。</li>
+<li>向下的类型转换（downcast）：比如将Animal类型转换为dog类型。即将父类型转换为子类型。对于向下类型转换，必须要显示指定（必须要使用强制类型转换）。</li>
+</ol>
+</li>
+<li><p>抽象类（abstract class ）:使用abstract关键字所修饰的累叫做抽象类。抽象类无法实例化，也就是说，不能new出来一个抽象类的对象（实例）。</p>
+</li>
+<li><p>抽象方法（abstract method）:使用abstract关键字所修饰的方法叫做抽象方法。<em><strong>抽象方法需要定义在抽象类中。</strong></em> 相对于抽象方法，之前所定义的方法叫做具体方法（有声明，有实现）。</p>
+</li>
+<li><p>如果有一个类包含了抽象方法，那么这个类一定是个抽象类。</p>
+</li>
+<li><p>如果某个类是抽象类，那么该类可以包含具体方法（有声明，有实现）。</p>
+</li>
+<li><p>如果一个类中包含了抽象方法，那么这个类一定要声明成abstract class ，也就是说，该类一定是抽象类；反之，如果某个类是抽象类，那么该类既可以包含抽象方法，也可以包含具体方法。</p>
+</li>
+<li><p>无论何种情况，只要一个类是抽象类，那么这个类就无法实例化。</p>
+</li>
+<li><p>在子类继承父类（父类是一个抽象类）的情况下，那么该子类必须要实现父类中所定义的所有抽象方法；否则，该子类需要声明一个<strong>abstract class</strong> 。</p>
+</li>
+<li><p>接口（interface）：接口的地位等同于class, <strong>接口中所有方法都是抽象方法。</strong> 在声明接口中的方法时，可以使用abstract关键字，也可以不使用。通常情况下，都会省略掉abstract关键字。（有声明，无实现）。</p>
+</li>
+<li><p>可以将接口看作是特殊的抽象类（抽象类中可以有具体方法，也可以有抽象方法，而接口中只能有抽象方法，不能有具体方法）。</p>
+</li>
+<li><p>类可以实现接口，实现使用关键字implements表示，代表了某个类实现了某个接口。</p>
+</li>
+<li><p>一个类实现了某个接口，那么该类必须要实现接口声明的所有方法。如果该类是个抽象类，那么就无需实现接口中的方法了。</p>
+</li>
+<li><p>Java是单继承的，也就是说某个类只能有唯一一个父类；一个类可以实现多个接口，多个接口之间使用逗号分隔。</p>
+</li>
+<li><p>多态：所谓多态，就是父类型的引用可以指向子类型的对象，或者接口类型的引用可以指向实现该接口的类的实例。关于接口与实现接口的类之间的强制类型转换方式与父类和子类之间的强制类型转换方式完全一样。</p>
+</li>
+<li><p>Static 关键字：可以用于修饰属性，也可以用于修饰方法，还可以用于修饰类。</p>
+</li>
+<li><p>static 修饰属性：无论一个类生成了多少个对象，所有这些对象共同使用唯一一份静态成员变量；一个对象对该静态成员变量进行了修改，其他对象的该静态成员变量的值也随之发生变化。如果一个成员变量是static的，那么我们可以通过 类名.成员变量名 的方式来使用它（Java推荐我们使用这种方法）。</p>
+</li>
+<li><p>static 修饰方法：static 修饰的方法叫做静态方法。对于静态方法来说，可以使用类名.方法名的方式来访问。</p>
+</li>
+<li><p><strong>静态方法只能继承，不能重写（Override）。</strong></p>
+</li>
+<li><p>final关键字：final可以修饰属性、方法、类。</p>
+</li>
+<li><p>final修饰类：当一个类被final所修饰时，表示该类是一个终态类，即不能被继承。</p>
+</li>
+<li><p>final修饰方法：当一个方法被final所修饰时，表示该方法是一个终态方法，即不能被重写（Override） 。</p>
+</li>
+<li><p>final 修饰属性：当一个属性被final所修饰时，表示该属性不能被改写。</p>
+</li>
+<li><p>当final修饰一个原生数据类型时，表示该原生数据类型的值不能发生变化（比如说不能从10变成20）；如果final修饰一个引用类型时，表示该引用类型不能在指向其他对象了；但该引用所指向的对象的内容是可以发生变化的。</p>
+</li>
+<li><p>类的静态代码块只会执行一次，是在类被加载的时候执行的，因为每个类只会被加载一次，所有静态代码块也只会被执行一次；而构造方法则不然，每次生成一个对象的时候都会调用类的构造方法，所以new一次就会调用构造方法一次。</p>
+</li>
+<li><p>如果继承体系中既有构造方法，又有静态代码块，那么首先执行最顶层的类的静态代码块，一直执行到最底层类的静态代码块。<strong>注意：静态代码块只会执行一次</strong> 。</p>
+</li>
+<li><p>不能在静态方法中访问非静态成员变量；可以在静态方法中访问静态的成员变量。可以在非静态方法中访问静态的成员变量。</p>
+</li>
+<li><p><strong>总结：静态的只能访问静态的；非静态的可以访问一切</strong></p>
+</li>
+<li><p><strong>不能在静态方法中使用this关键字。</strong></p>
+</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="http://example.com">MagicHell</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://example.com/2023/08/18/Java%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/">http://example.com/2023/08/18/Java%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Java/">Java</a></div><div class="post_share"><div class="social-share" data-image="https://picsum.photos/id/237/200/300" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/08/18/hello-world/" title="Hello World"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picsum.photos/200/300?grayscale" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">Hello World</div></div></a></div><div class="next-post pull-right"><a href="/2023/08/18/Spring%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/" title="Spring基础学习"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.paulzzh.tech/touhou/random" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Spring基础学习</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/touxiang.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">MagicHell</div><div class="author-info__description">MagicHell的学习经历</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Magic-Hell"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Magic-Hell" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://blog.csdn.net/qq_57295603?spm=1010.2135.3001.5421" target="_blank" title="CSDN"><i class="fa fa-book-open"></i></a><a class="social-icon" href="mailto:magic_hell@163.com" target="_blank" title="Email"><i class="fas fa-envelope-open-text"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">欢迎来到我的世界</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E8%AE%B2"><span class="toc-number">1.</span> <span class="toc-text">第一讲</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E8%AE%B2"><span class="toc-number">2.</span> <span class="toc-text">第二讲</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E8%AE%B2"><span class="toc-number">3.</span> <span class="toc-text">第三讲</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E8%AE%B2"><span class="toc-number">4.</span> <span class="toc-text">第四讲</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E8%AE%B2"><span class="toc-number">5.</span> <span class="toc-text">第五讲</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E8%AE%B2"><span class="toc-number">6.</span> <span class="toc-text">第七讲</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E8%AE%B2"><span class="toc-number">7.</span> <span class="toc-text">第八讲</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E8%AE%B2"><span class="toc-number">8.</span> <span class="toc-text">第九讲</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E8%AE%B2"><span class="toc-number">9.</span> <span class="toc-text">第十讲</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%80%E8%AE%B2"><span class="toc-number">10.</span> <span class="toc-text">第十一讲</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%BA%8C%E8%AE%B2"><span class="toc-number">11.</span> <span class="toc-text">第十二讲</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%83%E8%AE%B2"><span class="toc-number">12.</span> <span class="toc-text">第十七讲</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%85%AB%E8%AE%B2"><span class="toc-number">13.</span> <span class="toc-text">第十八讲</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B9%9D%E8%AE%B2"><span class="toc-number">14.</span> <span class="toc-text">第十九讲</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E8%AE%B2"><span class="toc-number">15.</span> <span class="toc-text">第二十讲</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%B8%80%E8%AE%B2"><span class="toc-number">16.</span> <span class="toc-text">第二十一讲</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%BA%8C%E8%AE%B2"><span class="toc-number">17.</span> <span class="toc-text">第二十二讲</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%B8%89%E8%AE%B2"><span class="toc-number">18.</span> <span class="toc-text">第二十三讲</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%9B%9B%E8%AE%B2"><span class="toc-number">19.</span> <span class="toc-text">第二十四讲</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/08/21/springboot%E5%AD%A6%E4%B9%A0/" title="springboot学习"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://t.mwm.moe/pc" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="springboot学习"/></a><div class="content"><a class="title" href="/2023/08/21/springboot%E5%AD%A6%E4%B9%A0/" title="springboot学习">springboot学习</a><time datetime="2023-08-20T17:10:47.000Z" title="Created 2023-08-21 01:10:47">2023-08-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/08/19/UML%E5%AD%A6%E4%B9%A0/" title="UML学习"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgapi.cn/bing.php" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="UML学习"/></a><div class="content"><a class="title" href="/2023/08/19/UML%E5%AD%A6%E4%B9%A0/" title="UML学习">UML学习</a><time datetime="2023-08-19T05:33:40.000Z" title="Created 2023-08-19 13:33:40">2023-08-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/08/18/SpringBoot/" title="Spring Boot"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picsum.photos/300" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Spring Boot"/></a><div class="content"><a class="title" href="/2023/08/18/SpringBoot/" title="Spring Boot">Spring Boot</a><time datetime="2023-08-18T11:43:32.000Z" title="Created 2023-08-18 19:43:32">2023-08-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/08/18/hello-world/" title="Hello World"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picsum.photos/200/300?grayscale" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2023/08/18/hello-world/" title="Hello World">Hello World</a><time datetime="2023-08-18T11:43:32.000Z" title="Created 2023-08-18 19:43:32">2023-08-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/08/18/Java%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/" title="Java基础学习"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picsum.photos/id/237/200/300" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java基础学习"/></a><div class="content"><a class="title" href="/2023/08/18/Java%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/" title="Java基础学习">Java基础学习</a><time datetime="2023-08-18T06:47:52.000Z" title="Created 2023-08-18 14:47:52">2023-08-18</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://source.unsplash.com/random/1920x1080')"><div id="footer-wrap"><div class="copyright">&copy;2023 By MagicHell</div><div class="framework-info"><span>作者 </span><a target="_blank" rel="noopener" href="https://magic-hell.github.io/">Magichell</a><span class="footer-separator">|</span><span>Github </span><a target="_blank" rel="noopener" href="https://magic-hell.github.io">MagicHell</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><div class="js-pjax"></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="255" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="true" data-text="富强,民主,文明,和谐,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="15px" data-random="true" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
