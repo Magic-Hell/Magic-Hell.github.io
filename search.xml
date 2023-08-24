@@ -46,7 +46,7 @@
       <link href="/2023/08/23/Redis%E5%AD%A6%E4%B9%A0/"/>
       <url>/2023/08/23/Redis%E5%AD%A6%E4%B9%A0/</url>
       
-        <content type="html"><![CDATA[<h1 id="1-Redis简介"><a href="#1-Redis简介" class="headerlink" title="1.  Redis简介"></a>1.  Redis简介</h1><p>   Redis（全称为Remote Dictionary Server）是一个开源的高性能键值  对存储系统，具有快速、灵活和可扩展的特性。它是一个基于内存的数据结构存储系统，可以用作数据库、缓存和消息代理。</p><h2 id="2-数据处理"><a href="#2-数据处理" class="headerlink" title="2. 数据处理"></a>2. 数据处理</h2><p><strong>Redis中的键是区分大小写的</strong></p><ol><li><p>字符串String</p><p>Redis存储数据是以键值对的形式存储的，所以我们需要指定一个键和一个值。</p><p>可以使用SET命令来设置一个键值对。</p><img src="/2023/08/23/Redis%E5%AD%A6%E4%B9%A0/%E6%89%B9%E6%B3%A8%202023-08-23%20092711.png" class="" title="批注 2023-08-23 092711.png"><p>可以使用GET命令然后后面加上键的名称。</p><img src="/2023/08/23/Redis%E5%AD%A6%E4%B9%A0/%E6%89%B9%E6%B3%A8%202023-08-23%20093038.png" class="" title="批注 2023-08-23 093038.png"><p>可以使用DEL命令来删除一个键。</p><img src="/2023/08/23/Redis%E5%AD%A6%E4%B9%A0/%E6%89%B9%E6%B3%A8%202023-08-23%20093513.png" class="" title="批注 2023-08-23 093513.png"><p>可以使用EXISTS判断一个键是否存在。</p><img src="/2023/08/23/Redis%E5%AD%A6%E4%B9%A0/%E6%89%B9%E6%B3%A8%202023-08-23%20093714.png" class="" title="批注 2023-08-23 093714.png"><p>可以使用KEYS查找现有键</p><img src="/2023/08/23/Redis%E5%AD%A6%E4%B9%A0/%E6%89%B9%E6%B3%A8%202023-08-23%20093958.png" class="" title="批注 2023-08-23 093958.png"><p>可以使用TTl来查看一下name键的过期时间；可以使用EXPIRE来设置键值对的过期时间</p><img src="/2023/08/23/Redis%E5%AD%A6%E4%B9%A0/%E6%89%B9%E6%B3%A8%202023-08-23%20095802.png" class="" title="批注 2023-08-23 095802.png"><ol start="2"><li><p>列表List</p><p>一般用来存储和操作一组有顺序的数据。</p><p>可以使用LPUSH或者RPUSH命令来将元素添加到列表的头部或者尾部</p><img src="/2023/08/23/Redis%E5%AD%A6%E4%B9%A0/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-08-24%20103306.png" class="" title="屏幕截图 2023-08-24 103306.png"><img src="/2023/08/23/Redis%E5%AD%A6%E4%B9%A0/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-08-24%20103701.png" class="" title="屏幕截图 2023-08-24 103701.png"><p>可以使用LPOP和RPOP命令来分别从头部或者尾部删除元素</p><img src="/2023/08/23/Redis%E5%AD%A6%E4%B9%A0/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-08-24%20103951.png" class="" title="屏幕截图 2023-08-24 103951.pn"></li></ol><p>可以使用LYRIM删除指定范围以外的元素</p><img src="/2023/08/23/Redis%E5%AD%A6%E4%B9%A0/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-08-24%20104859.png" class="" title="屏幕截图 2023-08-24 104859.png"></li></ol>]]></content>
+        <content type="html"><![CDATA[<h1 id="1-Redis简介"><a href="#1-Redis简介" class="headerlink" title="1.  Redis简介"></a>1.  Redis简介</h1><p>   Redis（全称为Remote Dictionary Server）是一个开源的高性能键值  对存储系统，具有快速、灵活和可扩展的特性。它是一个基于内存的数据结构存储系统，可以用作数据库、缓存和消息代理。</p><h2 id="2-数据处理"><a href="#2-数据处理" class="headerlink" title="2. 数据处理"></a>2. 数据处理</h2><p><strong>Redis中的键是区分大小写的</strong></p><ol><li><p>字符串String</p><p>Redis存储数据是以键值对的形式存储的，所以我们需要指定一个键和一个值。</p><p>可以使用SET命令来设置一个键值对。</p><img src="/2023/08/23/Redis%E5%AD%A6%E4%B9%A0/%E6%89%B9%E6%B3%A8%202023-08-23%20092711.png" class="" title="批注 2023-08-23 092711.png"><p>可以使用GET命令然后后面加上键的名称。</p><img src="/2023/08/23/Redis%E5%AD%A6%E4%B9%A0/%E6%89%B9%E6%B3%A8%202023-08-23%20093038.png" class="" title="批注 2023-08-23 093038.png"><p>可以使用DEL命令来删除一个键。</p><img src="/2023/08/23/Redis%E5%AD%A6%E4%B9%A0/%E6%89%B9%E6%B3%A8%202023-08-23%20093513.png" class="" title="批注 2023-08-23 093513.png"><p>可以使用EXISTS判断一个键是否存在。</p><img src="/2023/08/23/Redis%E5%AD%A6%E4%B9%A0/%E6%89%B9%E6%B3%A8%202023-08-23%20093714.png" class="" title="批注 2023-08-23 093714.png"><p>可以使用KEYS查找现有键</p><img src="/2023/08/23/Redis%E5%AD%A6%E4%B9%A0/%E6%89%B9%E6%B3%A8%202023-08-23%20093958.png" class="" title="批注 2023-08-23 093958.png"><p>可以使用TTl来查看一下name键的过期时间；可以使用EXPIRE来设置键值对的过期时间</p><img src="/2023/08/23/Redis%E5%AD%A6%E4%B9%A0/%E6%89%B9%E6%B3%A8%202023-08-23%20095802.png" class="" title="批注 2023-08-23 095802.png"><ol start="2"><li><p>列表List</p><p>一般用来存储和操作一组有顺序的数据。</p><p>可以使用LPUSH或者RPUSH命令来将元素添加到列表的头部或者尾部</p><img src="/2023/08/23/Redis%E5%AD%A6%E4%B9%A0/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-08-24%20103306.png" class="" title="屏幕截图 2023-08-24 103306.png"><img src="/2023/08/23/Redis%E5%AD%A6%E4%B9%A0/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-08-24%20103701.png" class="" title="屏幕截图 2023-08-24 103701.png"><p>可以使用LPOP和RPOP命令来分别从头部或者尾部删除元素</p><img src="/2023/08/23/Redis%E5%AD%A6%E4%B9%A0/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-08-24%20103951.png" class="" title="屏幕截图 2023-08-24 103951.pn"></li></ol><p>可以使用LYRIM删除指定范围以外的元素</p><img src="/2023/08/23/Redis%E5%AD%A6%E4%B9%A0/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-08-24%20104859.png" class="" title="屏幕截图 2023-08-24 104859.png"></li><li><p>SET是一种无序集合</p><ul><li>他和列表的区别在于列表中的元素都是可以重复的而SET中的元素是不能重复的</li><li>SET中的元素不像列表那样有序</li></ul></li></ol><p>​可以使用SADD来向SET中添加一个元素</p><img src="/2023/08/23/Redis%E5%AD%A6%E4%B9%A0/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-08-25%20073659.png" class="" title="屏幕截图 2023-08-25 073659.png"><img src="/2023/08/23/Redis%E5%AD%A6%E4%B9%A0/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-08-25%20074111.png" class="" title="屏幕截图 2023-08-25 074111.png"><p>可以使用SREM命令来删除集合中的元素</p><img src="/2023/08/23/Redis%E5%AD%A6%E4%B9%A0/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-08-25%20074640.png" class="" title="屏幕截图 2023-08-25 074640.png">]]></content>
       
       
       <categories>
@@ -99,25 +99,6 @@
     
     
     <entry>
-      <title>Hello World</title>
-      <link href="/2023/08/18/hello-world/"/>
-      <url>/2023/08/18/hello-world/</url>
-      
-        <content type="html"><![CDATA[<h1 id="各类编程语言的第一个程序"><a href="#各类编程语言的第一个程序" class="headerlink" title="各类编程语言的第一个程序"></a>各类编程语言的第一个程序</h1><h2 id="Go"><a href="#Go" class="headerlink" title="Go"></a>Go</h2><p>代码示例</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    fmt.Println(<span class="string">&quot;Hello, World!&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>运行结果</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> hello </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Spring Boot</title>
       <link href="/2023/08/18/SpringBoot/"/>
       <url>/2023/08/18/SpringBoot/</url>
@@ -129,6 +110,25 @@
         <tags>
             
             <tag> Spring </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2023/08/18/hello-world/"/>
+      <url>/2023/08/18/hello-world/</url>
+      
+        <content type="html"><![CDATA[<h1 id="各类编程语言的第一个程序"><a href="#各类编程语言的第一个程序" class="headerlink" title="各类编程语言的第一个程序"></a>各类编程语言的第一个程序</h1><h2 id="Go"><a href="#Go" class="headerlink" title="Go"></a>Go</h2><p>代码示例</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    fmt.Println(<span class="string">&quot;Hello, World!&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>运行结果</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> hello </tag>
             
         </tags>
       
