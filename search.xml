@@ -8,7 +8,7 @@
       <link href="/2023/09/07/%E5%9B%BE%E7%81%B5%E7%AC%AC%E4%BA%94%E6%9C%9F%E7%AC%94%E8%AE%B0/"/>
       <url>/2023/09/07/%E5%9B%BE%E7%81%B5%E7%AC%AC%E4%BA%94%E6%9C%9F%E7%AC%94%E8%AE%B0/</url>
       
-        <content type="html"><![CDATA[<h1 id="1-Spring底层核心原理解析"><a href="#1-Spring底层核心原理解析" class="headerlink" title="1. Spring底层核心原理解析"></a>1. Spring底层核心原理解析</h1>]]></content>
+        <content type="html"><![CDATA[<h1 id="1-Spring底层核心原理解析"><a href="#1-Spring底层核心原理解析" class="headerlink" title="1. Spring底层核心原理解析"></a>1. Spring底层核心原理解析</h1><ol><li>bean的创建生命周期<ul><li>UserService.class—&gt;无参构造方法（推断构造方法）—-&gt;普通对象—&gt;依赖注入（属性赋值）—-&gt;初始化前(@PostConstruct)—&gt; 初始化（IniializingBean）—&gt;初始化后（Aop）—&gt;代理对象—-&gt;Bean<ul><li>注：instance of IniializingBean  可以判断此方法是否被调用</li><li>Spring会先去寻找无参构造方法，如果找到则调用，再去寻找有参构造方法（如果为一个则调用，如果为多个，则报错）</li></ul></li></ul></li></ol>]]></content>
       
       
       <categories>
